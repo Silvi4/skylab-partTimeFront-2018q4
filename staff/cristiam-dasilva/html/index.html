@@ -8,7 +8,7 @@
     <h1>Cristiam's first html</h1>
     <h2>this is my first html file</h2>
 
-    <img src="./guitar.png" />
+    <img src="./guitar.png" alt="mi foto" />
     <div>
       <p>
         Loren <span>ipsum Loren</span> ipsumLoren <br />ipsumLoren ipsumLoren
@@ -29,6 +29,95 @@
         <li>Item 2</li>
         <li>Item 3</li>
       </ol>
+
+      <hr>
+      <p>Más información en <a href="https://www.linkedin.com/in/cristiam-da-silva/" target="_blank">mi perfil en LinkedIn</a> </p>
     </div>
+    <div>
+        <dl>
+            <dt>¿Qué comida te gusta?</dt>
+            <dd>Me gusta todo</dd>
+            <dt>Te gusta la pizza con piña</dt>
+            <dd>Sí, que viva la creatividad!</dd>
+
+        </dl>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>head 1</th>
+                <th>head 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>celda 11</td>
+                <td>celda 12</td>
+            </tr>
+            <tr>
+                <td>celda incompleta</td>
+            </tr>
+            <tr>
+                <td colspan="2">celda completa</td>
+            </tr>
+            <tr>
+                <td>celda 21</td>
+                <td>celda 22</td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <iframe src="https://stackoverflow.com/questions/2765421/how-do-i-push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too"></iframe>
+    <br/>
+    <h3>Contacta conmigo</h3>
+    <form action="http://example.com" method="GET">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" size="10" maxlength="15" name="nombre" placeholder="escribe tu nombre aquí"/>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="escribe tu email"/>
+            <input type="hidden" name="oculto" placeholder="no se muestra"/>
+        </div>
+        <div>
+            <label>Edad</label>
+            <input type="number" name="edad" placeholder="¿cuántos años tienes?"/>
+        </div>
+        <div>
+            <label>Adjunto</label>
+            <input type="file" name="attach" placeholder="Adjunta archivo"/>
+        </div>
+        <div>
+            <label>Tipo de mensaje</label>
+            <input type="radio" name="msg_type" value="Saludar"/> Saludar
+            <input type="radio" name="msg_type" value="Por trabajo"/> Trabajo
+        </div>
+        <div>
+            <label>Intereses</label>
+            <input type="checkbox" name="interes 1" value="int1"/> Interés 1
+            <input type="checkbox" name="interes 2" value="int2"/> Interés 2
+        </div>
+        <div>
+            <label for="selector">Ya no se que poner</label>
+            <select name="selector">
+                <option selected disabled>Selecciona 1</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+            </select>
+        </div>
+        <div>
+            <label>Mensaje</label>
+            <textarea name="mensaje"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="enviar" />
+        </div>
+        <div>
+            <input type="checkbox" name="accept_terms" value="accept"/>
+            <label>Acepto los términos y condiciones</label>
+        </div>
+    </form>
   </body>
 </html>
