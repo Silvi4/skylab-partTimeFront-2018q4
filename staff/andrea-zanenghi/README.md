@@ -11,9 +11,11 @@
 |git add folder_name      |add folder                                 |https://git-scm.com/docs/git-add     |
 |git commit -m "message"  |upload for commit + msg                    |https://git-scm.com/docs/git-commit  |
 |git push origin develop  |push repo to develop branch                |https://git-scm.com/docs/git-push    |
-|git push origin master   |push local repo to maste - when needed     |https://git-scm.com/docs/git-push    |
-|git checkout -b          |checkout and create/pass to new branch     |https://git-scm.com/docs/git-checkout|
-|git --help               |documentation on terminal                  |                                     |
+|git push origin master   |push local repo to master - when needed    |https://git-scm.com/docs/git-push    |
+|git checkout -b newbranch|checkout and create/pass to new branch     |https://git-scm.com/docs/git-checkout|
+|git pull origin develop  |download all new changes                   |https://git-scm.com/docs/git-pull    |
+|git pull                 |download all when already in branch        |                                     |
+|git --help               |documentation on terminal                  |                                     |                                 
 
 Full Documentation: https://git-scm.com/docs
 
