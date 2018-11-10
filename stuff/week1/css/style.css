@@ -1,0 +1,104 @@
+.item {
+    color: blue;
+    font-weight: 100;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align: center;
+    
+  }
+
+  #container2{
+    color: lightblue;
+
+  }
+
+  p{
+    color: red;
+  }
+
+  *{
+    color: green;
+  }
+
+  body{
+    color: yellow;
+  font-size: 25px;
+}
+
+  ul{
+    list-style-type: none;
+    margin-bottom: 150px;
+  }
+
+  ul li{
+    float: left;
+    margin-left: 15px;
+  }
+
+  ul li.to-the-right{
+    float:right;
+  }
+
+
+  #container {
+    padding-top: 0px;
+    clear: both;
+  }
+  #container>p.grandchild{
+    color: gray;
+  }
+
+  #container p {
+    color: orange;
+}
+
+  #container p:hover {
+    background-color: lightgreen;
+  }
+
+  div[profe="david"]{
+    background-color: blue;
+  }
+  div[alumna] {
+    background-color:red;
+  }
+
+  .bold{
+    font-weight:700;
+    color: yellow;
+  }
+  #span-imposible{
+    text-align:center;
+  }
+
+  #vertical{
+    background-color: blue;
+    display:inline-block;
+    
+    vertical-aligh: middle;
+  }
+
+  #vertical #span-v-1{
+    background-color: green;
+    height: 70px;
+  }
+
+  #triangle{
+    width: 0px;
+    height: 00px;
+    border-style: solid;
+    border-bottom-width: 30px;
+    border-left-width: 30px;
+    border-right-width: 30px;
+    border-top-width: 30px;
+    border-top-color: white;
+    border-bottom-color: red;
+    border-right-color: white;
+    border-left-color: white;
+    cursor: pointer;
+}
+
+#triangle:hover{
+    border-bottom-color: blue;
+}
