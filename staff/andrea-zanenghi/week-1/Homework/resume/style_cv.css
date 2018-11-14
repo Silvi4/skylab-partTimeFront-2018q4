@@ -1,0 +1,73 @@
+@import url (https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  padding:2px;
+  margin:5px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.expertise{
+  background: lightblue;
+}
+
+.personal-info{
+  position: relative;
+  float: right;
+  background-color: lightyellow;
+}
+
+span{
+  background: yellow;
+}
+
+span.titles{
+  color: orange;
+}
+
+.info-block{
+  clear: both;
+  background-color: lightgrey;
+}
+.info-block ul{
+  float:right;
+  width: 310px;
+  background: lightskyblue;
+}
+
+.info-block h1{
+  display: inline;
+  float:left;
+
+}
+
+footer{
+  float:right;
+}
+
+@media all and (min-width: 780px){
+
+  header{
+    display: inline-block;
+    }
+    
+    .info-block{
+      clear: both;
+      background-color: lightgrey;
+    }
+    .info-block ul{
+      float:right;
+      padding:50px;
+      width: 300px;
+      margin-top: -40px;
+      margin-right: 150px;
+      background: lightskyblue;
+    }
+    
+    .info-block h1{
+      display: inline;
+      float:left;
+    
+}
