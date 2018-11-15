@@ -1,0 +1,14 @@
+@import url (https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  padding:2px;
+  margin:5px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.expertise{
+  background: lightblue;
+}
