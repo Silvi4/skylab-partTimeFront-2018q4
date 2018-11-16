@@ -1,0 +1,46 @@
+html {
+    width:100%;
+    height:100%;    
+}
+
+body {
+    width:100%;
+    height:100%;
+}
+
+a {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menuItem {
+    width: 100px;
+    color: white;
+    background-color: gray;
+}
+
+@media all and (min-width: 500px) {
+    .menu {
+        flex-direction: row;
+    }
+
+    li:last-child {
+        margin-left: auto;
+    }
+}
