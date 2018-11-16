@@ -1,0 +1,248 @@
+body{
+    font-family: 'Allerta Stencil', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: black;
+    padding: 0px 3px;
+}
+
+a:hover {
+    color: rgb(255, 230, 0);
+}
+
+header {
+    background-color: #ececec;
+    height: 200px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#logo-charge{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#logo {
+    height: 200px;
+    width: 170px;
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px -28px;
+    background-size: cover;
+    margin-left: 30px;
+    
+}
+
+#info {
+    width: 400px;
+    
+}
+
+#info h2{
+    margin-top: 0;
+}
+
+#info h1{
+    margin-bottom: 0;
+}
+
+
+#contacto {
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 19px;
+    
+    
+}
+
+#contacto ul{
+    list-style-type: none;
+}
+
+main {
+display: flex;
+flex-direction: column;
+
+}
+
+main section{
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+h2 , h3 , h4{
+
+    
+}
+
+h3{
+    flex-basis: 190px;
+    flex-shrink: 0;
+    
+}
+
+#personal-profile{
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+
+}
+
+#personal-profile:hover {
+    background-color: rgb(140, 228, 255);
+    color: rgb(9, 59, 124);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+}
+
+#work-experience{
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+    
+}
+
+.work-experience-container {
+    display: flex;
+}
+
+#work-experience:hover {
+    background-color: rgb(61, 245, 138);
+    color: black;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-color: black;
+    border-width: 5px;
+}
+
+#companies {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+
+#work-experience #companies ul{
+
+    list-style: none;
+    margin-top: 0;
+}
+
+#work-experience a{
+
+    
+}
+
+
+#education {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+}
+
+.section-info {
+  
+    flex-basis: auto;
+    
+}
+
+#education:hover {
+    border-top: 4px;
+    background-color: rgb(255, 86, 19);
+    color: rgb(90, 20, 20);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+}
+
+
+form {
+    width: 95%;
+}
+
+
+#contact-form {
+    background-color: #505050;
+    width: 100%;
+    padding: 10px 40px;
+    height: 100%;
+    float: left;
+    color: white;
+}
+
+
+#form-body textarea{
+    width: 48%;
+    border-style: none;
+    font-size: 15px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+#form-body  label , input{
+
+    margin-bottom: 20px;
+
+}
+
+.form-labels{
+    
+    width: 51%;
+
+}
+
+
+input[type="text"] {
+
+    width: 80%;
+    height: 31px;
+    font-size: 16px;
+    border-style: none;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.enviar-button{
+    border: none;
+    padding: 1rem 2rem;
+    margin: 6px;
+    text-decoration: none;
+    background: #1f1f1f;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: initial;
+    text-align: center;
+    
+    
+}
+
+
+footer {
+
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #505050;
+}
