@@ -13,7 +13,7 @@
     
     .section-left{
       display: inline-block;
-      float:left;
+      float: left;
       border: 2px solid black;
       height: 1000px;
       width: 10%;
@@ -22,7 +22,7 @@
     
     .section-right{
       display: inline-block;
-      float:right;
+      float: right;
       border: 2px solid black;
       height: 1000px;
       width: 10%;
