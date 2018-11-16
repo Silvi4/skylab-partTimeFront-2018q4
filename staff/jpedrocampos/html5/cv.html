@@ -5,60 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Mukta|Rajdhani" rel="stylesheet">
     <title>José Pedro Campos</title>
-    <style>
-        .headerCV {
-            color: gray;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="outterContainer">
-            <div class="innerContainer">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="headerPhoto">
-                                <figure>
-                                    <img src="../html/images/GrayDatabase48.png" />
-                                </figure>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="headerName">
-                                <h1>José Pedro Campos<br>
-                                    <h4>Programador .NET</h4>
-                                </h1>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="headerAddress">
-                                <p>Calle Casanova, 43<br>Barcelona<br>
-                                    <a href="http://jpcampos.com" target="__blank">www.jpcampos.com</a>
-                                </p>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section>
-            <aside>
+    <main class="mainContainer">
+        <header class="header">
 
-            </aside>
+            <div class="headerMainContainer">
+                <div class="headerPhoto">
+                    <figure>
+                        <img src="../html/images/GrayDatabase48.png" />
+                    </figure>
+                </div>
+
+                <div class="headerTitle">
+                    <h1 class="headerName">José Pedro Campos</h1>
+                    <h4 class="headerJob">Programador .NET</h4>
+                </div>
+
+                <div class="headerAddress">
+                    <p>Calle Casanova, 43<br>Barcelona,<br>España<br>
+                        <a href="http://jpcampos.com" target="__blank">www.jpcampos.com</a>
+                    </p>
+                </div>
+            </div>
+
+        </header>
+        <aside>
+
+        </aside>
+        <section class="mainSection">
             <article class="outterContainer">
                     
                 <div class="innerBodyContainer">
-                    <br>
+                    
                     <h2>Experiencia</h2>
     
                     <hr>
     
-                    <h3>Grupo ICA (Barcelona, Espana) | Marzo 2018 - HOY</h3>
-                    <p><strong>Programador .NET Senior</strong></p>
+                    <h3 class="companyName">Grupo ICA (Barcelona, Espana) | Marzo 2018 - HOY</h3>
+                    <p class="companyJob"><strong>Programador .NET Senior</strong></p>
                     <p>Integración en equipos de desarrollo de aplicaciones .NET para varios clientes.<br>
                         Tecnologías utilizadas:
                         <ul>
@@ -69,6 +56,8 @@
                             <li>ASP.NET MVC Web API</li>
                             <li>WPF</li>
                             <li>WCF SOAP Web Services</li>
+                            <li>Entity Framework</li>
+                            <li>SQL Server 2012, 14, 16, Oracle</li>
                             <li>GIT</li>
                             <li>Team Foundation Server</li>
                             <li>Jira Software (gestión de tareas)</li>
@@ -77,14 +66,14 @@
                 </div>
             
             </article>
-            <article>
+            <article class="outterContainer">
 
                 <div class="innerBodyContainer">
                     <br>
                     <br>
                 
-                    <h3>MEDIAMATICA (Matosinhos, Oporto, Portugal) | Octubre 2016 - Marzo 2018</h3>
-                    <p><strong>Programador .NET Senior</strong></p>
+                    <h3 class="companyName">MEDIAMATICA (Matosinhos, Oporto, Portugal) | Octubre 2016 - Marzo 2018</h3>
+                    <p class="companyJob"><strong>Programador .NET Senior</strong></p>
                     <p>
                         Desarrollo de software para varios clientes.<br>
                         Tecnologías utilizadas: 
@@ -94,6 +83,9 @@
                             <li>C#</li>
                             <li>Web Services Restfull</li>
                             <li>ASP.NET MVC Web API</li>
+                            <li>Entity Framework</li>
+                            <li>ADO.NET</li>
+                            <li>SQL Server 2014, 16</li>
                             <li>Windows Forms</li>
                             <li>Controlos DevExpress</li>
                         </ul>
@@ -101,14 +93,14 @@
                 </div>
             
             </article>
-            <article>
+            <article class="outterContainer">
 
                 <div class="innerBodyContainer">
                     <br>
                     <br>
                 
-                    <h3>AMBIDATA (Vila Nova de Gaia, Portugal) | Enero 2016 - Septiembre 2016</h3>
-                    <p><strong>Programador .NET Senior</strong></p>
+                    <h3 class="companyName">AMBIDATA (Vila Nova de Gaia, Portugal) | Enero 2016 - Septiembre 2016</h3>
+                    <p class="companyJob"><strong>Programador .NET Senior</strong></p>
                     <p>
                         Desarrollo de software para clínicas médicas, hospitales y laboratórios.<br>
                         Tecnologías utilizadas: 
@@ -116,6 +108,9 @@
                             <li>.NET Framework 6.*</li>
                             <li>Visual Studio 2015</li>
                             <li>VB.NET</li>
+                            <li>ADO.NET</li>
+                            <li>Dapper</li>
+                            <li>SQL Server 2008 R2</li>
                             <li>Windows Forms</li>
                             <li>Controlos DevExpress</li>
                             <li>Web Services WCF SOAP</li>
@@ -126,7 +121,7 @@
                 </div>
             
             </article>
-            <article>
+            <article class="outterContainer">
                 <div class="innerBodyContainer">
                     <br>
                     <h2>Formación</h2>
@@ -147,7 +142,7 @@
                     <br>
                 </div>
             </article>
-            <article>
+            <article class="outterContainer">
                 
                 <div class="innerBodyContainer">
                     <h2>Contacto</h2>
@@ -180,13 +175,13 @@
                 </div>
                 
             </article>
-            <aside>
-
-            </aside>
         </section>
+        <aside>
+
+        </aside>
+        <footer>
+            Copywright 2018
+        </footer>
     </main>
-    <footer>
-        Copywright 2018
-    </footer>
 </body>
 </html>

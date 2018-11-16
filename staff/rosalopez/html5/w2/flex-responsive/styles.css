@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+div {
+    padding: 15px;
+}
+div:hover{
+    background-color: orangered;
+}
+
+@Media screen and (min-width: 500px){
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+.contact{
+    margin-left: auto;
+}
+    
+    
+
+}
