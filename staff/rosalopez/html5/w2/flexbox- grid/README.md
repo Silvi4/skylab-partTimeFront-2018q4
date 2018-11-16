@@ -26,3 +26,8 @@ REVISAMOS LA ESTRUCTURA ORTODOXA DE HTML:
             <article>
     Si en general lo ponemos como columnas, luego será más fácil ponerlo en dispositivos pequeños para colocarlo en filas (trasponer).
     id es para Javascript y class es para CSS, usarlo con cabeza!!
+
+
+    Para una buena practica el html y el body debería tener el height y el width deberian de el 100% porque asi tienes todo el espacio para distribuir los elementos, de hecho eso es todo el documento.
+
+* Volvemos a recordar que hay que pasarlo a git, git branch, git status, 
