@@ -1,20 +1,23 @@
 .products{
   background-color: white;
-  background-color: white;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-    flex-direction: row-reverse;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
 
-    
+  
+
 }
 .product-offer{
   background-color: lightgreen;
+  flex-grow:0;
 }
 .product-standard{
   background-color: lightgray;
+  flex-grow:0;
 }
 .product-premium{
   background-color: gold;
-  flex-grow: 2;
+  flex-grow:0;
+
 }
