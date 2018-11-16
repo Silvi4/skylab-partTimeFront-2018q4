@@ -10,6 +10,8 @@ body {
 
 a {
     color: white;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 ul {
@@ -20,6 +22,7 @@ ul {
 
 li {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .menu {
@@ -27,10 +30,12 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    
 }
 
 .menuItem {
     width: 100px;
+    height: 50px;
     color: white;
     background-color: gray;
 }
