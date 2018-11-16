@@ -1,7 +1,8 @@
 .products{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  flex-grow: 1;
   background-color: white;
 }
 .product-offer{
@@ -11,5 +12,6 @@
   background-color: lightgray;
 }
 .product-premium{
+  flex-grow: 2;
   background-color: gold;
 }

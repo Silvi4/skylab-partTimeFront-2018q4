@@ -1,4 +1,7 @@
+
 .products{
+  display: flex;
+  flex-direction: row-reverse;
   background-color: white;
 }
 .product-offer{

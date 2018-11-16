@@ -1,4 +1,11 @@
+body {
+  margin: 0;
+}
+
 .products{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: white;
 }
 .product-offer{

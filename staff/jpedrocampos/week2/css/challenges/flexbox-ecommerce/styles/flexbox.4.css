@@ -1,4 +1,9 @@
 .products{
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   background-color: white;
 }
 .product-offer{
