@@ -1,0 +1,141 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 6vw);
+    grid-template-rows: repeat(5, 6vw);
+    grid-gap: 4vw;
+    justify-content: center;
+}
+
+div {
+    display: inline-grid;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridCenterItem {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    font-size: 56px;
+    transform: rotate(-45deg);
+}
+
+.gridItem1 {
+    border: solid;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem2 {
+    color: white;
+    background-color: red;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem3 {
+    color: white;
+    background-color: red;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem4 {
+    color: white;
+    background-color: red;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem5 {
+    border: solid;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem6 {
+    grid-column: 5;
+    grid-row: 2;
+    color: white;
+    background-color: green;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem7 {
+    grid-column: 5;
+    grid-row: 3;
+    color: white;
+    background-color: green;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem8 {
+    grid-column: 5;
+    grid-row: 4;
+    color: white;
+    background-color: green;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem9 {
+    grid-column: 5;
+    grid-row: 5;
+    border: solid;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem10 {
+    grid-column: 4;
+    grid-row: 5;
+    color: white;
+    background-color: blue;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem11 {
+    grid-column: 3;
+    grid-row: 5;
+    color: white;
+    background-color: blue;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem12 {
+    grid-column: 2;
+    grid-row: 5;
+    color: white;
+    background-color: blue;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem13 {
+    grid-column: 1;
+    grid-row: 5;
+    border: solid;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem14 {
+    grid-column: 1;
+    grid-row: 4;
+    color: white;
+    background-color: orange;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem15 {
+    grid-column: 1;
+    grid-row: 3;
+    color: white;
+    background-color: orange;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.gridItem16 {
+    grid-column: 1;
+    grid-row: 2;
+    color: white;
+    background-color: orange;
+    box-shadow: 5px 5px 10px 0px black;
+}
