@@ -8,7 +8,7 @@
 * Código
 * Tablas
 * Links
-* Test
+* Tests
 
 ## Referencia
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
