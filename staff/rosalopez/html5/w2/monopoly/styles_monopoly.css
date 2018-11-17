@@ -1,0 +1,113 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 6vw);
+    grid-template-rows: repeat(5, 6vw);
+    grid-gap: 4vw;
+    justify-content: center;
+}
+.monopoly {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    font-size: 30px;
+    transform: rotate(-45deg);
+    padding: 0;
+    padding-top: 75px;
+}
+
+p {
+    text-align: center;
+}
+
+.p1, .p5, .p9, .p13{
+    border: solid black 1px;
+}
+
+.p1 {
+    transform: rotate(45deg);
+}
+
+.p2, .p3, .p4 {
+    background-color: green;
+    transform: rotate(-180deg);
+    border: solid black 1px;
+}
+
+.p5 {
+    transform: rotate(90deg);
+}
+
+.p6, .p7, .p8 {
+    transform: rotate(-90deg);
+    background-color: yellow;
+    border: solid black 1px;
+}
+
+.p6{
+    grid-column: 5;
+    grid-row: 2;
+}
+.p7{
+    grid-column: 5;
+    grid-row: 3;
+}
+.p8{
+    grid-column: 5;
+    grid-row: 4;
+}
+.p9{
+    grid-column: 5;
+    grid-row: 5;
+}
+
+.p10, .p11, .p12 {
+    background-color: red;
+    border: solid black 1px;
+}
+
+.p10{
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.p11{
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.p12{
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.p13{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.p14, .p15, .p16 {
+    transform: rotate(90deg);
+    background-color: blue;
+    border: solid black 1px;
+}
+
+.p14{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.p15{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.p16{
+    grid-column: 1;
+    grid-row: 2;
+}
