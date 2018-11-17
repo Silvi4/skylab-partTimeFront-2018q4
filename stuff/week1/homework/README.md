@@ -15,3 +15,4 @@ Style your CV following this ![example](./styled-cv/example.png)
 
 ## Research Grid
 [Docs](https://developer.mozilla.org/es/docs/Web/CSS/grid)
+[CSS Tricks guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
