@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.monopoli{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(15.9vw, auto);
+  grid-gap: 5vw;
+  margin: 4vw auto;
+  
+}
+
+.monopoli div{
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.monopoli article{
+  border: 1px solid black;
+}
+
+#monopoli-banner{
+  border: none;
+}
+
+#monopoli-banner{
+
+  font-size: 12vw;
+  grid-area: 2 / 2 / 5 / 5;
+  transform: rotate(-45deg);
+  padding-top: 20vw;
+
+}
+
+.white {
+  box-sizing: border-box;
+  border-top: 3vw solid white;
+}
+
+.green{
+  box-sizing: border-box;
+  border-top: 3vw solid green;
+}
+
+.blue{
+  box-sizing: border-box;
+  border-top: 3vw solid blue;
+}
+
+.orange{
+  box-sizing: border-box;
+  border-top: 3vw solid orange;
+  transform: rotate(-90deg);
+}
+
+.red{
+  box-sizing: border-box;
+  border-top: 3vw solid red;
+  transform: rotate(90deg);
+}
+
+.monopoli #c1 {
+  transform: rotate(-45deg);
+  border: transparent;
+}
+
+.monopoli #c5 {
+  transform: rotate(45deg);
+  border: transparent;
+}
+
+.monopoli #c9 {
+  transform: rotate(135deg);
+  border: transparent;
+}
+
+.monopoli #c13 {
+  transform: rotate(-135deg);
+  border: transparent;
+}
