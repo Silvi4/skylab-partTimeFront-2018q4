@@ -4,6 +4,8 @@
 
 ![Calendar](stuff/doc/images/calendar.png)
 
+[Git Cheat-sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+
 [Repo](https://github.com/SkylabCoders/skylab-partTimeFront-2018q4)
 
 [Slides](https://docs.google.com/presentation/d/1SBAsJr681fSjNqshJdWh64ZT5mNlqWLoKmVsw4M_aOI/edit?usp=sharing)
