@@ -5,7 +5,7 @@
 * Formatos
 * Imágenes
 * Listas
-* Códgigo
+* Código
 * Tablas
 * Links
 
