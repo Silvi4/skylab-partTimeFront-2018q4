@@ -1,0 +1,90 @@
+html , body{
+
+height: 100%;
+
+}
+
+.monopoly-main{
+    height: 800px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(5, 6vw);
+    grid-template-rows: repeat(5, 6vw);
+    grid-gap: 4vw;
+    justify-content: center;
+    font-size: 24px;
+
+}
+
+.center{
+    
+    grid-area: 2 / 2 / span 3 / span 3;
+    transform: rotate(-45deg);
+    padding-top: 30%;
+    text-align: center;
+    font-size: 40%;
+
+}
+
+#num6{
+    grid-column: 5;
+    transform: rotate(-90deg);
+    text-align: center;
+    padding-top: 40%;
+}
+#num7{
+    grid-column: 5;
+    transform: rotate(-90deg);
+    text-align: center;
+    padding-top: 40%;
+}
+#num8{
+    grid-column: 5;
+    transform: rotate(-90deg);
+    text-align: center;
+    padding-top: 40%;
+}
+#num9{
+    grid-column: 5;
+    
+}
+
+#num10 {
+    grid-area: 5 / 4;
+}
+
+#num11 {
+    grid-area: 5 / 3;
+}
+
+#num12 {
+    grid-area: 5 / 2;
+}
+
+#num13 {
+    grid-area: 5 / 1;
+}
+
+#num14 {
+    grid-area: 4 / 1;
+    transform: rotate(90deg);
+    text-align: center;
+    padding-top: 40%;
+
+}
+
+#num15 {
+    grid-area: 3 / 1;
+    transform: rotate(90deg);
+    text-align: center;
+    padding-top: 40%;
+
+}
+
+#num16 {
+    grid-area: 2 / 1;
+    transform: rotate(90deg);
+    text-align: center;
+    padding-top: 40%;
+
+}

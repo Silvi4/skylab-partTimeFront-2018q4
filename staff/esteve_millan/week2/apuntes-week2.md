@@ -47,3 +47,16 @@ Los de bootsrap
 @media (min-width: 1200px) { ... }
 
 **DOC: https://www.viewportsizes.com**
+
+
+## WEBPACK PLUGINS
+
+* css-loder
+* style-loader
+* mini-css-extract-plugin
+* html-loader
+* file-loader
+* node-sass
+* sass-loader
+
+## SASS .scss
