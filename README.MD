@@ -12,4 +12,6 @@
 
 [Roadmap to becoming a web developer in 2018](https://github.com/kamranahmedse/developer-roadmap/blob/master/readme.md)
 
+[React Developer Roadmap](https://hackernoon.com/the-2018-react-js-roadmap-4d0a43814c02)
+
 [Consejos de los que ya han pasado por Skylab](https://youtu.be/ByBSPpA-Y_Y)
