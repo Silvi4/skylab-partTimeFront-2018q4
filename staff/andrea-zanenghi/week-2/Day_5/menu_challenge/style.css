@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:500,900);
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: Rubik;
+}
+
+.menu-block{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-block{
+  text-align: center;
+}
+
+.menu-block li{
+  padding: 10px;
+}
+.menu-block li:hover{
+  background: goldenrod;
+}
+
+
+
+@media all and (min-width: 600px) {
+
+  .menu-block{
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .menu-block li{
+    margin: 0px 0px;
+  }
+
+  /* .menu-block li:last-of-type{
+    margin-left: auto;
+  } */
+
+  .left-block{
+    display: flex;
+    flex-direction: row;
+  }
+  
+
+
+}
+
