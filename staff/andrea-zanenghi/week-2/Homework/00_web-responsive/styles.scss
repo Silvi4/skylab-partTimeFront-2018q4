@@ -137,7 +137,7 @@ margin-bottom: 10px;
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-direction: row;
-  margin-top: 20px;
+  margin: 20px;
   overflow: hidden;
 
   & .info-items{
@@ -355,19 +355,17 @@ margin-bottom: 10px;
 
 }
 
-[id^="togList"],                        /* HIDE CHECKBOX */
-[id^="togList"] ~ .list,                /* HIDE LIST */
-[id^="togList"] + label  span + span,   /* HIDE "Collapse" */
-[id^="togList"]:checked + label span{   /* HIDE "Expand" (IF CHECKED) */
+[id^="togList"],                       
+[id^="togList"] ~ .list,                
+[id^="togList"] + label  span + span,   
+[id^="togList"]:checked + label span{   
   display:none;
 }
 [id^="togList"]:checked + label span + span{
   display:inline-block;            
-      /* SHOW "Collapse" (IF CHECKED) */
 }
 [id^="togList"]:checked ~ .list{
   display:block;      
-                /* SHOW LIST (IF CHECKED) */
 }
 
 .title-block{
