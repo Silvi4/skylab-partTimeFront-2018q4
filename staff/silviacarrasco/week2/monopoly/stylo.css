@@ -1,0 +1,152 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(5,6vw);
+    grid-template-rows: repeat(5, 6vw);
+    grid-gap: 100px;
+    justify-content: center;
+    grid-gap: 50px;
+    text-align: center;
+}
+
+.text {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    font-size: 3em;
+}
+
+header {
+    height: 25px;
+}
+.green header {
+    background-color: green;
+}
+
+.orange header {
+    background-color: orange;
+}
+
+.red1 header, .red2 header, .red3 header {
+    background-color: red;
+}
+
+.blue1 header, .blue2 header, .blue3 header {
+    background-color: blue;
+}
+
+span {
+    display: grid;
+    justify-items: center;
+}
+
+.no-color1 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.no-color1 span {
+    transform: rotate(137deg);
+}
+
+.no-color2 {
+    display: grid;
+    grid-column: 5;
+    grid-row: 1;
+    border: 1px solid; 
+    justify-content: center;
+    align-items: center;
+}
+
+.no-color2 span {
+    transform: rotate(-137deg);
+}
+.no-color3 {
+    display: grid;
+    grid-column: 5;
+    grid-row: 5;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-color3 span {
+    transform: rotate(310deg);
+}
+
+.no-color4 {
+    display: grid;
+    grid-column: 1;
+    grid-row: 5;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-color4 span {
+    transform: rotate(45deg);
+}
+.green {
+    display: grid;
+    border: 1px solid;
+}
+
+.orange {
+    display: grid;
+    border: 1px solid;
+    grid-column: 5;
+    transform: rotate(-90deg);
+}
+
+.red1 {
+    display: grid;
+    border: 1px solid;
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.red2 {
+    display: grid;
+    border: 1px solid; 
+    grid-column: 3; 
+    grid-row: 5;
+}
+
+.red3 {
+    display: grid;
+    grid-column: 2;
+    grid-row: 5;
+    border: 1px solid;
+}
+
+.blue1 {
+    display: grid;
+    border: 1px solid;
+    grid-column: 1;
+    grid-row: 4;
+    transform: rotate(90deg); 
+}
+
+.blue2 {
+    display: grid;
+    border: 1px solid;
+    grid-column: 1;
+    grid-row: 3;
+    transform: rotate(90deg); 
+}
+.blue3 {
+    display: grid;
+    border: 1px solid;
+    grid-column: 1;
+    grid-row: 2;
+    transform: rotate(90deg); 
+}
