@@ -1,0 +1,38 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+%common-div{
+  width: 50vw;
+  height: 50vh;
+  background: $primaryColor;
+}
+
+.div-1 {
+  @extend %common-div;
+  @include flex-complete(row, space-between, flex-start);
+
+
+  img{
+    max-width: 20%;
+  }
+}
+
+.div-2{
+  @extend %common-div;
+  @include flex-complete(row, flex-start, center);
+
+  .img{
+    max-width: 50%;
+    transition: all 1s;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}
+

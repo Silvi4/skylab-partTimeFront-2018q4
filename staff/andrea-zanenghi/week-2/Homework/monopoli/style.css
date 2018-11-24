@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin: 50px;
+}
+
+.monopoli-wrap{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  align-items: stretch;
+  text-align: center;
+  font-size: 1.5em;
+  height: 10vh;
+  width: 10vw;
+}
+
+.monopoli-wrap div{
+  border: 1px solid #554115;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 10vh;
+  width: 10vh;
+}
+
+.monopoli{
+  grid-area: 2 / 2 / 5 / 5;
+  border: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-45deg);
+  font-size: 7vh;
+}
+
+.green{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transform: rotate(180deg);
+}
+.green header{
+  background-color: lightgreen;
+  grid-row: 1;
+}
+
+
+.orange{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transform: rotate(270deg);
+}
+
+.orange header{
+  background-color: orange;
+  grid-row: 1;
+}
+
+.red{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.red header{
+  background-color: red;
+  grid-row: 1;
+}
+
+.blue{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transform: rotate(90deg);
+}
+
+.blue header{
+  background-color: blue;
+  grid-row: 1;
+}
+
+.top-r-block{
+  transform: rotate(135deg);
+}
+.top-l-block{
+  transform: rotate(-135deg);
+}
+.bot-r-block{
+  transform: rotate(45deg);
+}
+.bot-l-block{
+  transform: rotate(-45deg);
+}
+
+.internal{
+  grid-row: 2;
+}
