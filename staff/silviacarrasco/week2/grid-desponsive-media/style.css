@@ -1,0 +1,73 @@
+.izquierdo , .derecho, .fila {
+    border: 1px solid #f39c9c;
+    background-color: #fedcdd;
+    height: 20px;
+}
+.izquierdo-col, .derecho-col, .fila-col {
+    background-color: #fec3c2;
+    height: 20px;
+    text-align: center;
+    border-left: 1px solid #f39c9c;
+    border-right: 1px solid #f39c9c;
+    color: white;
+}
+.global1 {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #f39c9c;
+}
+
+.capsula-izquierda, .capsula-derecha {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+.col {
+    background-color: #fec3c2;
+    color: black;
+    text-align: center;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    
+}
+.global2 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #f39c9c;
+}
+
+@media screen and (min-width: 900px) {
+    .capsula-fila {
+        display: flex;
+    }
+    .bloque1 {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .bloque2 {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .bloque3 {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
+    }
+    .bloque4 {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 8;
+    }
+    .bloque5 {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
