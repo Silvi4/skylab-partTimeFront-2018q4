@@ -1,0 +1,29 @@
+.products{
+  background-color: white;
+<<<<<<< HEAD:stuff/week2/css/challenges/flexbox-ecommerce/styles/flexbox.css
+  background-color: white;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    
+=======
+  display: flex;
+>>>>>>> 57f39e1d6aab148a6720f3acf19c912b7d1820be:staff/andrea-zanenghi/week-2/Day_5/flexbox-ecommerce/styles/flexbox_b.css
+}
+.product-offer{
+  background-color: lightgreen;
+}
+.product-standard{
+  background-color: lightgray;
+}
+.product-premium{
+  background-color: gold;
+<<<<<<< HEAD:stuff/week2/css/challenges/flexbox-ecommerce/styles/flexbox.css
+  flex-grow: 2;
+}
+=======
+
+}
+>>>>>>> 57f39e1d6aab148a6720f3acf19c912b7d1820be:staff/andrea-zanenghi/week-2/Day_5/flexbox-ecommerce/styles/flexbox_b.css

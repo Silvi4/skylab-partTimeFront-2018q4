@@ -21,6 +21,7 @@
   .split()
   .replace()
   .substr()
+  .substring()
   .toLowerCase()
   .toUpperCase()
   .toString() -------> si el objeto no acepta el método se puede intentar de usar **String(x)**
@@ -50,3 +51,56 @@
 - for of ----> for ( var prop in array )
 
 - forEach -----> 
+
+
+###ARRAYS
+
+var nombreArray = []
+var newArray = new Array ('a','b', 'c')
+
+**METHODS**
+
+.join()---> devuelve string
+.concat()----> devuelve nuevo array
+.indexOf()
+.push()----> añade al final
+.unshift()
+.shift()
+.pop()-----> quita el ultimo guael valor si igualas a variable 
+.sort()-----> devuelve array
+.reverse()-----> ordena al reverse
+.slice()
+.splice()-----> devuelve array nuevo(no modifica el array)
+.splice()
+
+
+
+###OBJECTS
+
+var obj = {
+
+    attributo: 'John';
+    lastName: 'Lennon';
+    birthday: new Date('XXXX-XX-XX')
+    children: [{name: 'Sean'} , name: 'Julian'}]
+
+}
+
+
+for in ----> for ( var prop in obj ) 
+
+**CONSTRUCTOR FUNCTION**
+
+function Person(name, lastName, birthday){
+
+    this.name = name;
+    this.lastName = lastName;
+    this.birthday = birthday;
+    this.getAge() = function(){};
+
+}
+
+var seanBirthay = new Date(197,9,7) 
+var Sean = new Person( Sean, Lennon, );
+
+**this.** *llama al objeto en si o sus caracteristicas*
