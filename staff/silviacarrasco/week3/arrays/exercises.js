@@ -62,7 +62,7 @@ function diferences(test1,test2) {
         if(!test2.includes(test1[i])) {
             dif.push(test1[i])
         }
-        // test 
+        
     }
     for (var j = 0; j < test2.length; j++) {
         if(!test1.includes(test2[j])) {
