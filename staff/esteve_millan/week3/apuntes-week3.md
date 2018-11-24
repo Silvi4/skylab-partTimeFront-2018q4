@@ -72,6 +72,7 @@ var newArray = new Array ('a','b', 'c')
 .slice()
 .splice()-----> devuelve array nuevo(no modifica el array)
 .splice()
+Object.assign(objeto a sobreescribir , objeto que sobreescribe)
 
 
 
@@ -104,3 +105,4 @@ var seanBirthay = new Date(197,9,7)
 var Sean = new Person( Sean, Lennon, );
 
 **this.** *llama al objeto en si o sus caracteristicas*
+
