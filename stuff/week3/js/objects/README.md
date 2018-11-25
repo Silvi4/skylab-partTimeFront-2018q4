@@ -45,3 +45,30 @@ var hash = function(s) {
     return String(a);
 };
 ```
+
+HINT2: init chain
+
+function Chain(){
+    blocks: [{
+        number: 0,
+        timestamp: new Date(),
+        prevHash: ''
+        data:''
+    }],
+    addBlock: function(data){
+        //Obtiene el último bloque de la cadena
+
+        //Obtiene el número del último bloque y suma 1
+
+        //Calcular el timestamp
+
+        //Calcular el hash del bloque actual:
+        // llamar a hash(s) siendo s un string resultado de
+        // concatenar los valores de number, timestamp, prevHash y data del
+        // último bloque
+    },
+    isValidChain: function(){
+        //Recorre la cadena y verifica que cada hash es válido
+    }
+}
+
