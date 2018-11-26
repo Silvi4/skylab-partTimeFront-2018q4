@@ -1,4 +1,4 @@
-function isArray(array){
+/*function isArray(array){
     return Array.isArray(array);
 }
 console.log(isArray('Skylab'));
@@ -109,7 +109,7 @@ console.log(getRandom([ 3, 8, 7, 6, 5, -4, -3, 2, 1 ]));
 
 function findDuplicates(array){
     var object={};
-    var result=[]
+    var result=[];
     for(var i=0;i<array.length-1;i++){
         array.includes(array[i],i+1)?object[array[i].toString()]=true:"";
     }
@@ -119,6 +119,21 @@ function findDuplicates(array){
     return result;
 }
 console.log(findDuplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
+*/
+function findDuplicates2(array){
+    var result=[]
+    for(var i=0;i<array.length-1;i++){
+        if(array.includes(array[i],i+1)){
+            var removeElement = array[i];
+            removeElement!==undefined?result.push(removeElement):"";
+            while (array.indexOf(removeElement) !== -1) {
+                delete array[array.indexOf(removeElement)];
+              }
+        }
+    }
+    return result;
+}
+console.log(findDuplicates2([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
 
 function mergeArrays(array1,array2){
     var object={};
@@ -133,3 +148,33 @@ function mergeArrays(array1,array2){
     return result;
 }
 console.log(mergeArrays([1, 2, 3],[2, 30, 1]));
+
+function separateEven(number){
+    var initialString = number.toString();
+    var result=initialString[0];
+    for(var i=1; i<initialString.length;i++){
+        if(initialString[i]%2==0 && initialString[i-1]%2 ==0){
+            result += "-"+initialString[i];
+        }else{
+            result += initialString[i];
+        }
+    }
+    return result;
+}
+console.log(separateEven("02546888"));
+
+function mostFequentItem(array){
+    var counter={}
+    var result={element:0,number:0}
+    for(var i=0; i<array.length;i++){
+        counter[array[i]]== undefined? counter[array[i]]=1: counter[array[i]]+=1;
+    }
+    for(props in counter){
+        if(result.number<counter[props]){
+            result.element=props;
+            result.number=counter[props];
+        }
+    }
+    return "The element "+result.element+" is "+result.number+" times in the array";
+}
+console.log(mostFequentItem([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3,3,3]))
