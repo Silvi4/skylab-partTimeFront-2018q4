@@ -68,11 +68,11 @@ var newArray = new Array ('a','b', 'c')
 .shift()
 .pop()-----> quita el ultimo guael valor si igualas a variable 
 .sort()-----> devuelve array
-.reverse()-----> ordena al reverse
+.reverse()-----> ordena al reves
 .slice()
 .splice()-----> devuelve array nuevo(no modifica el array)
-.splice()
 Object.assign(objeto a sobreescribir , objeto que sobreescribe)
+object.is()----> compara dos objetos y devuelve un boolean.
 
 
 

@@ -1,0 +1,18 @@
+function camelize( randomString ){
+
+    var splittedString = randomString.split(' ')
+
+    for (var i = 0; i < splittedString.length; i++) {     
+        
+        var capitalLetters = splittedString[i][0].toUpperCase()
+        var replaceCapital = splittedString[i].replace(splittedString[i][0] , capitalLetters )
+
+        splittedString.splice( splittedString[i] , 0 , replaceCapital )
+
+    }
+
+    console.log(splittedString)
+
+};
+
+camelize('JavaScript exercises' );
