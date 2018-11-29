@@ -120,7 +120,6 @@ Write a JavaScript function to move an array element from one position to anothe
     console.log(move([10, 20, 30, 40, 50], -1, -2));
     [10, 20, 30, 50, 40]
 
-### swapCase
 
 Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 
