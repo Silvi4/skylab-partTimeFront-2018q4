@@ -1,4 +1,4 @@
-/*function isArray(array){
+function isArray(array){
     return Array.isArray(array);
 }
 console.log(isArray('Skylab'));
@@ -119,7 +119,7 @@ function findDuplicates(array){
     return result;
 }
 console.log(findDuplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
-*/
+
 function findDuplicates2(array){
     var result=[]
     for(var i=0;i<array.length-1;i++){
@@ -178,3 +178,81 @@ function mostFequentItem(array){
     return "The element "+result.element+" is "+result.number+" times in the array";
 }
 console.log(mostFequentItem([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3,3,3]))
+
+function moveElement(array,position,move){
+    var element=array.splice(position,1);
+    array.splice(move,0,element[0]);
+    return array;
+}
+console.log(moveElement([10, 20, 30, 40, 50],0,2))
+console.log(moveElement([10, 20, 30, 40, 50], -1, -2));
+
+function swapCase(string){
+    result = "";
+    for(var i=0; i<string.length; i++){
+        if(string.charCodeAt(i)>91){
+            result+=string[i].toUpperCase();
+        }else{
+            result+=string[i].toLowerCase();
+        }
+    }
+    return result;
+}
+console.log(swapCase('AaBbCc'));
+
+function printArray(array){
+    var result=""
+    for(var i=0;i<array.length;i++){
+        result+="row "+i+"\n";
+        for(var j=0;j<array[i].length;j++){
+            result+=" "+array[i][j]+"\n";
+        }
+    }
+    return result;
+}
+console.log(printArray([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]));
+
+function array_filled(number,string){
+    var result=[]
+    for(var i=0;i<number;i++){
+        result.push(string);
+    }
+    return result;
+}
+console.log(array_filled(3,'default value'));
+console.log(array_filled(4,'password'));
+
+function sumOfSquares(array){
+    var result=0;
+    for(var i=0;i<array.length;i++){
+        result+=array[i]*array[i];
+    }
+    return result;
+
+}
+console.log(sumOfSquares([8, 11, 9, 4]))
+
+function removeDuplicate(array){
+    var object={};
+    var result=[];
+    for(var i=0;i<array.length;i++){
+        var element = typeof array[i]==="string"?array[i].toLowerCase():array[i];
+        object[element]=true;
+    }
+    for(prop in object){
+        result.push(prop);
+    }
+    return Array.from(result);
+}
+console.log(removeDuplicate([5,4,34,5,4,65,5,6,7,8,"Hola","hola"]))
+
+function showChoices(color){
+    var o = ["th","st","nd","rd"]
+    var message=""
+    for(var i=0;i<color.length;i++){
+        var position = i+1;
+        message += position+o[position<4?position:0]+" choice is "+color[i]+"\n";
+    }
+    return message;
+}
+console.log(showChoices(["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]));
