@@ -71,4 +71,3 @@ function Chain(){
         //Recorre la cadena y verifica que cada hash es válido
     }
 }
-
