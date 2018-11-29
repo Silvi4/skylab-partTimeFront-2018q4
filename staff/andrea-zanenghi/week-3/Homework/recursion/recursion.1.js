@@ -1,10 +1,9 @@
-// Remove repetitive characters - Working but result stored outside Function
+// Remove repetitive characters - Array
 
 var repeated = 'ttyaabcbcb'
-var result = []
 
-function removeRepeatChars(str){
-
+function removeRepeatChars(str, result = []){
+  
   var recut;
   ordered = str.split('').join('')
   tempChar = ordered[0]
@@ -14,13 +13,25 @@ function removeRepeatChars(str){
   if (str[0] === undefined){return unique} 
     else {recut = ordered.split(tempChar).join('')}
 
-  removeRepeatChars(recut)
+  removeRepeatChars(recut,result)
   return unique
 }
 
 console.log(removeRepeatChars(repeated))
 
+// Remove repetitive characters - String
 
+var repeated = 'ttyaabcbcb'
+
+function removeRepeatChars(str, result = []){
+  console.log(result)
+  result = result.includes(str[0]) ? result : result+str[0]; 
+  if (str.length === 1){return result} 
+    else {return removeRepeatChars(str.substr(1),result)}
+
+}
+
+console.log(removeRepeatChars(repeated))
 
 
 
