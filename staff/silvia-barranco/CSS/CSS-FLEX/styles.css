@@ -1,0 +1,36 @@
+*{
+     box-sizing: border-box;
+}
+
+       .header{
+            background: #ffba5a;
+            display: flex;
+            flex-direction: column;
+        }
+        .navleft{
+                background: #ffba5a;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .item{
+                    background: #ffba5a;
+                    padding: 5px;
+                }
+
+            .navright{
+                background: #ffba5a;
+                padding: 5px;
+                text-align: center;
+
+            }
+
+@media all and (min-width: 500px){
+    .header{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .navleft{
+         flex-direction: row;
+        }
+}

@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  align-items: stretch;
+  text-align: center;
+  font-size: 20px;
+  height: 20vh;
+  width: 20vw;
+}
+
+.container div{
+  border: 1px solid #554115;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 15vh;
+  width: 15vh;
+}
+
+.monopoli{
+  grid-area: 2 / 2 / 5 / 5;
+  border: none;
+  font-size: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-45deg);
+  
+}
+
+.green{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transform: rotate(180deg);
+}
+.green header{
+  background-color: green;
+  grid-row: 1;
+}
+
+
+.yellow{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transform: rotate(270deg);
+}
+
+.yellow header{
+  background-color: yellow;
+  grid-row: 1;
+}
+
+.red{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.red header{
+  background-color: red;
+  grid-row: 1;
+}
+
+.blue{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transform: rotate(90deg);
+}
+
+.blue header{
+  background-color: blue;
+  grid-row: 1;
+}
+
+.rot1-right{
+  transform: rotate(135deg);
+}
+.rot2-left{
+  transform: rotate(-45deg);
+}
+.rot1-left{
+  transform: rotate(-135deg);
+}
+.rot2-right{
+  transform: rotate(45deg);
+}
+
+

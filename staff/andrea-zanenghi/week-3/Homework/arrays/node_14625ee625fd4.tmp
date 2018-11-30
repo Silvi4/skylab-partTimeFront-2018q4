@@ -1,0 +1,32 @@
+var playList = ['track1','track2','track3','track4','track5','track6']
+
+function shuffleArray(arr){
+
+  cloned = arr.map(function (x){return x})
+  temp = [];
+  shuffled = [];
+  indexNew = [];
+
+  for (var i=0;i<arr.length;i++){
+
+      var next_num = Math.floor((Math.random()*arr.length));
+
+      while (indexNew.indexOf(next_num) !== -1) {
+          next_num = Math.floor((Math.random()*arr.length));
+      }
+
+      indexNew.push(next_num);
+  }
+
+  for (i = arr.length; i = 1; i--){
+    console.log(indexNew)
+    temp = cloned.splice(indexNew[i],1)
+    shuffled.push(temp[0])
+    temp = [];
+  }
+  
+  return shuffled
+
+}
+
+console.log(shuffleArray(playList))
