@@ -34,3 +34,20 @@ function removeRepeatChars( randomString ){
 removeRepeatChars('aabcbcb');
 
 
+// reverse string
+
+function reverseString( str ){
+
+    if(str.length === 1){
+
+        return str;
+    }
+
+    var lastLetter = str.substr(-1)
+    var restoDelString = str.substr(0 , str.length-1 )
+
+    return lastLetter + reverseString(restoDelString)
+
+}
+
+reverseString('hello')
