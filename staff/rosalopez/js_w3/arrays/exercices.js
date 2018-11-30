@@ -289,10 +289,57 @@ sum_sq([8, 11, 9, 4]);
 //### showChoices
 
 //### showLeapYears
+function showLeapYears(starYear, endYear) {
+    var years = [];
+    for (var i = starYears; i <= endYear; i++){
+        years.push(i);
+    }
+    var leapYears =[];
+    for(var j =0; j < years.length ; j++){
+        var y= years[j];
+        if(y % 4 == 0){
+            leapYears.push(y);
+        }
+    }
+    return leapYears;
+};
+//version reducida
+function showLeapYears(starYear, endYear) {
+    var leapYears = [];
+    for (var i = starYear; i <= endYear; i++){
+        if(i % 4 == 0){
+            leapYears.push(i);
+        }
+    }
+    return leapYears;
+};
+
+showLeapYears(2000, 2012); 
 
 //### shuffleArray
 
 //### binarySearch
+var array = [1, 2, 3, 4, 5, 7, 8, 9];
+function binarySearch(array, item) {
+    var firstIndex = 0;
+    var lastIndex = array.length -1;
+    var middleIndex = Math.floor((lastIndex + firstIndex)/2);
+    while(array[middleIndex] !== item && firstIndex < lastIndex){
+        if (item < array[middleIndex]){
+            lastIndex = middleIndex -1;
+        } else if (item > array[middleIndex]){
+            firstIndex = middleIndex + 1
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex)/2);
+    }
+    if(array[middleIndex] == item){
+        return middleIndex;
+    } else {
+        return -1;
+    }
+};
+
+binarySearch(array, 3);
 
 //### sumPositions
 
