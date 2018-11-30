@@ -1,0 +1,233 @@
+body{
+
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+a {
+    color: black;
+    padding: 0px 3px;
+}
+
+a:hover {
+    color: rgb(255, 230, 0);
+}
+
+header {
+    background-color: #ececec;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#logo {
+    height: 200px;
+    width: 170px;
+    display: inline-block;
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    background-position: 0px -50px;
+    background-size: cover;
+    margin-left: 30px;
+    margin-top: 19px;
+}
+
+#info {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    margin-top: 19px;
+}
+
+#info h2{
+    margin-top: 0;
+}
+
+#info h1{
+    margin-top: 45px;
+    margin-bottom: 0;
+}
+
+
+#contacto {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 19px;
+    
+}
+
+#contacto ul{
+    list-style-type: none;
+}
+
+main {
+width: 95%;
+margin: auto;
+
+}
+
+main section{
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+}
+
+h2 , h3 , h4{
+
+    display: inline-block;
+}
+
+h3{
+ width: 190px;
+ vertical-align: top;
+    
+}
+
+#personal-profile{
+
+    display: block;
+    float: left;
+    padding-left: 20px;
+
+}
+
+#personal-profile:hover {
+    background-color: rgb(140, 228, 255);
+    color: rgb(9, 59, 124);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+}
+
+#work-experience{
+
+    display: block;
+    float: left;
+    padding-left: 20px;
+    
+}
+
+#work-experience:hover {
+    background-color: rgb(61, 245, 138);
+    color: black;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-color: black;
+    border-width: 5px;
+}
+
+#companies {
+
+    width: 75%;
+    float: right;
+}
+
+#work-experience #companies ul{
+
+    display: inline-block;
+    list-style: none;
+    padding-left: 0px;
+    margin-right: 15px;
+}
+
+#work-experience a{
+
+    display: block;
+}
+
+
+#education {
+    display: block;
+    float: left;
+    padding-left: 20px;
+}
+
+.section-info {
+    display: inline-block;
+    width: 75%;
+    float: right;
+}
+
+#education:hover {
+    border-top: 4px;
+    background-color: rgb(255, 86, 19);
+    color: rgb(90, 20, 20);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+}
+
+
+form {
+    width: 95%;
+}
+
+
+#contact-form {
+    background-color: #505050;
+    width: 100%;
+    padding: 10px 40px;
+    height: 100%;
+    float: left;
+    color: white;
+}
+
+
+#form-body textarea{
+    width: 48%;
+    border-style: none;
+    font-size: 15px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+#form-body  label , input{
+
+    margin-bottom: 20px;
+
+}
+
+.form-labels{
+    display: inline-block;
+    float: left;
+    width: 51%;
+
+}
+
+
+input[type="text"] {
+    display: inline-block;
+    width: 80%;
+    height: 31px;
+    font-size: 16px;
+    border-style: none;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.enviar-button{
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 6px;
+    text-decoration: none;
+    background: #1f1f1f;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: initial;
+    text-align: center;
+    float: right;
+    
+}
+
+
+footer {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #505050;
+}

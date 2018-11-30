@@ -1,0 +1,61 @@
+/*		<div class="header"></div>
+		<div class="section-left"></div>
+		<div class="main"></div>
+		<div class="section-right"></div>
+		<div class="submain"></div>
+		<div class="footer"></div>*/
+
+.allBlocks{
+	height: 100%;
+	width: 100%;
+	background-color: darkgrey;
+	border: 2px solid black;
+}
+.header{
+	position: absolute;
+	border: 2px solid black;
+	height: 100px;
+	width: 100%;
+	background-color: darkblue;
+}
+
+.section-left{ 
+	float:left;
+	border: 2px solid black;
+	height: 400px;
+	width: 10%;
+	background-color: darkred;
+}
+
+.section-right{
+	float: right;
+	transform: translateY(-100%);
+	border: 2px solid black;
+	height: 300px;
+	width: 10%;
+	background-color: grey;
+}
+
+.main{
+	position: inherit;
+	float: center;
+	border: 2px solid black;
+	height: 400px;
+    width: 90%;
+    margin-right: 0px;
+	background-color: darkgreen;
+}
+
+.submain{
+	border: 2px solid black;
+	height: 70px;
+	width: 100%;
+	background-color: yellow;
+}
+
+.footer{
+	border: 2px solid black;
+	height: 70px;
+	width: 100%;
+	background-color: plum;
+}
