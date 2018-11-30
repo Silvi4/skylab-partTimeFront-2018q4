@@ -256,3 +256,73 @@ function showChoices(color){
     return message;
 }
 console.log(showChoices(["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]));
+
+function showLeapYears(startyear,finishyear){
+    year = startyear;
+    LeapYears=[]
+    while(year!=finishyear){
+        if(year%4===0){
+            LeapYears.push(year)
+        }
+        year++;
+    }
+    return LeapYears;
+}
+console.log(showLeapYears(1970,2018));
+
+function shuffleArray(array){
+    var result = []
+    if(array.length==1){
+        return array;
+    }
+    result.push(array.splice(Math.floor(Math.random()*array.length),1));
+    return result.concat(shuffleArray(array)).join().split(",");
+
+}
+console.log(shuffleArray(["Blue ", "Green", "Red"]))
+console.log(shuffleArray(["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]))
+
+function binarySearch(items,element){
+    var index = Math.floor(items.length/2);
+    var startSearch = 0;
+    var finishSearch = items.length;
+    while(items[index]!=element&&finishSearch-startSearch>1){
+        element<=index?finishSearch=index:startSearch=index;
+        index=Math.floor((startSearch+finishSearch)/2)
+    }
+    if(items[index]==element){
+        return index;
+    }else{
+        return -1;
+    }
+    
+}
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9],1))
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9],5))
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9],9))
+for (var i=1;i<11;i++){
+    console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9],i))
+}
+
+function sumPositions(array1,array2){
+    var result=[];
+    var length = array1.length>array2.length?array1.length:array2.length;
+    for(var i=0;i<length;i++){
+        var num1 = array1[i]!=undefined?array1[i]:0;
+        var num2 = array2[i]!=undefined?array2[i]:0;
+        result[i]=num1+num2;
+    }
+    return result;
+}
+console.log(sumPositions([1,0,2,3,4],[3,5,6,7,8,13]))
+
+function rangeBetween(start,end){
+    var result = [];
+    for(i=start;i<=end;i++){
+        result.push(i);
+    }
+    return result;
+}
+console.log(rangeBetween(4,7));
+console.log(rangeBetween(-4,7));
+
