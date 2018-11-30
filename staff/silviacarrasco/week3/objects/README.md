@@ -44,18 +44,23 @@ var hash = function(s) {
     }
     return String(a);
 };
-```
 
 HINT2: init chain
 
 function Chain(){
-    blocks: [{
+   this.blocks: [{
         number: 0,
         timestamp: new Date(),
-        prevHash: ''
+        prevHash: '',
         data:''
     }],
-    addBlock: function(data){
+    this.addBlock: function(data){
+        var b = {
+            number: 0,
+            timestamp: new Date(),
+            prevHash: '',
+            data:''
+        };
         //Obtiene el último bloque de la cadena
 
         //Obtiene el número del último bloque y suma 1
@@ -68,7 +73,10 @@ function Chain(){
         // último bloque
     },
     isValidChain: function(){
+        return "not implemented"
         //Recorre la cadena y verifica que cada hash es válido
     }
 }
 
+var c = new Chain();
+console.log(c)

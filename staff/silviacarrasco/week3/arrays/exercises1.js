@@ -168,16 +168,48 @@ showLeapYears();
 // shuffleArray
 // Write a JavaScript program to shuffle an array.
 
+function shuffleArray(startYear, endYear){
+    var leapYears = []
+
+    for (var i = startYear; i <= endYear; i++) {
+        if(i % 4 == 0){
+            leapYears.push(i); 
+        }
+       
+    }
+
+    return leapYears;
+}
+
+shuffleArray(2000,2012)
+
 // binarySearch
 //Write a JavaScript program to perform a binary search.
 
-function binariSearch(item, num) {
-    for(var i = 0; i < item.length; i++){
-        
+function binariSearch(arr,item) {
+    var firstIndex = 0
+    var lastIndex = arr.length -1;
+    var middleIndex = Math.floor((lastIndex + firstIndex) / 2)
+ 
+    while(arr[middleIndex] !== item && firstIndex < lastIndex){
+        if(item < arr[middleIndex]){
+            lastIndex = middleIndex -1;
+        }else if(item > arr[middleIndex]){
+             firstIndex = middleIndex +1;
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+         // actualizar middleIndez a la nueva mitad del array
     }
-}
-
-binariSearch([1, 2, 3, 4, 5, 7, 8, 9], 1);
+ 
+    if(arr[middleIndex] == item){
+        return middleIndex;
+    }else{
+        return -1;
+    }
+ 
+ }
+ 
+ binariSearch([1, 2, 3, 4, 5, 7, 8, 9], 3);
 
 // sumPositions
 // There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
