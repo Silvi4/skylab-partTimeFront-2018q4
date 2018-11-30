@@ -24,7 +24,7 @@ console.log(removeRepeatChars(repeated))
 var repeated = 'ttyaabcbcb'
 
 function removeRepeatChars(str, result = []){
-  console.log(result)
+
   result = result.includes(str[0]) ? result : result+str[0]; 
   if (str.length === 1){return result} 
     else {return removeRepeatChars(str.substr(1),result)}
