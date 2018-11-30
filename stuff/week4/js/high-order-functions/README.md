@@ -2,7 +2,7 @@
 
 # Tasks
 
-## Camel Case
+## Capital Case
 
 Write a high order function that take the array of months and create a new array that contains the same months but with the first letter in upper case.
 
