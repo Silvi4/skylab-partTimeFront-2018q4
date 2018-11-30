@@ -348,6 +348,36 @@ function binarySearch(arr,item){
 
 console.log(binarySearch(items,3))
 
+// Real binary search
+
+var items = [1, 2, 3, 4, 5, 7, 8, 9]
+
+function binarySearch(arr,item){
+  var firstIndex = 0;
+  var lastIndex = arr.length-1;
+  var midIndex = Math.floor((lastIndex + firstIndex)/2)
+
+  while(arr[midIndex] != item && firstIndex < lastIndex){
+    // update midIndex
+    if (item < arr[midIndex]){
+      lastIndex = midIndex -1
+    } else if (item > arr[midIndex]){
+      firstIndex = midIndex +1
+    }
+    var midIndex = Math.floor((lastIndex + firstIndex)/2)
+  }
+
+  if(arr[midIndex] === item){
+    return midIndex
+  } else {
+    return -1
+  }
+
+}
+
+console.log(binarySearch(items,3))
+
+
 // Sum Positions
 
 var array1 = [1,0,2,3,4];
