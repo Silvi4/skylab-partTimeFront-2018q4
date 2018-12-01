@@ -67,7 +67,7 @@ function parameterize(str){
 parameterize(toBeParameterize);
 
 //### capitalize_first
-var toBeCapitalizeFirst ='this is Rosa from Spain'
+var toBeCapitalizeFirst ='this is rosa from spain'
 function capitalize_first(str) {
     return str.charAt(0).toUpperCase() + str.substr(1)
 };
@@ -117,8 +117,8 @@ camelize_words(toBeCamelize);
 //### uncamelize
 var toBeUncamelize ='ThisIsRosaFromSpain"'
 function uncamelize_words(str) {
-    var str = str.replace(/[A-Z]/g, function (letter){
-        return '_' +letter.toLowerCase();
+    var str = str.replace(/[A-Z]/g, function (char){
+        return '_' + char.toLowerCase();
     });
 	return str.replace("_", '');
 };
@@ -126,6 +126,15 @@ function uncamelize_words(str) {
 uncamelize_words(toBeUncamelize);
 
 //### repeat
+var toRepeat = 'ja';
+function repeat(str, times) {
+    var repeated = str.repeat(times);
+    return repeated;
+};
+
+repeat(toRepeat, 5);
+
+//primera versión, pero no puedes decir el número de repeticiones
 var toRepeat = 'ja';
 function repeat(str) {
     var repeated = str.concat(str, str);
