@@ -274,6 +274,16 @@ function leap_year_range(st_year, end_year) {
     }
 } 
 console.log(leap_year_range(2000,2012));
+//otra forma
+
+function findLeapYears(st_year, end_year){
+var leapYears=[];
+for (var i = st_year ; i <= end_year ; i++){
+    if (i % 4 == 0){
+        leapYears.push(i)
+    }
+} return leapYears;
+}
 
 //shuffleArray
 function shuffle(arr) {
@@ -290,23 +300,28 @@ myArr = [5,5,1,4,6,2,1]
 shuffle(myArr)
 
 //binarySearch
-function binary_Search(items, value){
-    var firstIndex  = 0,
-        lastIndex   = items.length - 1,
-        middleIndex = Math.floor((lastIndex + firstIndex)/2);
 
-    while(items[middleIndex] != value && firstIndex < lastIndex){
-       if (value < items[middleIndex]){
-            lastIndex = middleIndex - 1;
-        }else if (value > items[middleIndex]){
-            firstIndex = middleIndex + 1;
-        }
-        middleIndex = Math.floor((lastIndex + firstIndex)/2);
-    }
- return (items[middleIndex] != value) ? -1 : middleIndex;
-}
 var items = [1, 2, 3, 4, 5, 7, 8, 9];
-console.log(binary_Search(items, 1));
+function binarySearch(arr, item){
+    var firstIndex = 0;
+    var lastIndex = arr.length -1;
+    var middleIndex = Math.floor((lastIndex + firstIndex) / 2 );
+
+    while(arr[middleIndex] != item && firstIndex < lastIndex){
+        if(item < arr[middleIndex]){
+            lastIndex = middleIndex - 1
+        } else if ( item > arr[middleIndex]){
+            firstIndex = middleIndex + 1
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2 );
+       //actualizar  middleIndex a la nueva mitad del array
+    }
+    if (arr[middleIndex] == item){
+        return middleIndex
+    } else{
+     return -1;
+    }
+}
 
 //sumPositions
 function Arrays_sum(array1, array2){

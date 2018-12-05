@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman Super Mario</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!--<audio src="mi-archivo-de-audio.mp3" autoplay loop></audio>-->
+    <div id="header">
+        <h1>Super Mario Characters Hangman</h1>
+        <p>Guess the word using the alphabet</p>        
+    </div>
+    <div class="main">
+        <p id="lives"></p>
+        <h2 id="hold"></h2>
+        <div id="container">
+            <img src="images/image_part_001.png" alt="" id="image1">
+            <img src="images/image_part_002.png" alt="" id="image2">
+            <img src="images/image_part_003.png" alt="" id="image3">
+            <img src="images/image_part_004.png" alt="" id="image4">
+            <img src="images/image_part_005.png" alt="" id="image5">
+            <img src="images/image_part_006.png" alt="" id="image6">            
+        </div>
+        <div class="form">
+                <form id="guess-form" method="" action="#">
+                    <input id="input-guess" type="text" maxlength="1" id="letter-input"/>
+                    <button id="submit-button" type="submit" onClick="Letter()">Letter</button>
+                </form>
+        </div>
+        <div class="container">
+           <button onClick= "playGame()" id="reset">Play Again</button>
+        </div>
+    </div>    
+    <script type="text/javascript" src="hangman.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body{
+    background-image: url("https://i.gifer.com/3JWq.gif");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 16px;  
+}
+
+h1{
+    color: #ff0000;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+p{
+    color: white;
+    font-size: 20px;
+}
+#lives{
+    color: #ff0000;
+    font-size: 30px;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+#container {    
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(3, 100px);       
+    grid-gap: 2px 2px;
+    margin-bottom: 20px;
+}
+
+#image1, #image2, #image3,
+#image4, #image5, #image6 {
+  width: 100px;
+  height: 150px;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.fade-in {
+    opacity: 1 !important;
+  }
+
+#submit-button{
+    font-family: 'VT323', monospace;
+    border-radius: 5px;    
+    background: green;
+    color: white;
+    border: solid 1px #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    width: 70px;
+    margin: 10px;
+    outline: none;
+}
+
+#submit-button:hover{
+    background: red;
+    border: solid 1px #fff;
+    color: #fff;
+}
+
+#input-guess{
+    height: 30px;
+    width: 50px;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+}
+
+#reset {
+    font-family: 'VT323', monospace;
+    border-radius: 5px;    
+    background: green;
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 18px 10px;
+    width: 120px;
+    margin: 10px;
+    outline: none;
+}
+
+
+#reset:hover {
+    background: red;
+    border: solid 1px #fff;
+    color: #fff;
+}
+
+
+
+

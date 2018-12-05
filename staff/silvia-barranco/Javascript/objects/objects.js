@@ -31,3 +31,81 @@ var hash = function(s) {
     }
     return String(a);
 };
+
+function Chain(){
+    class Block {
+        constructor(index, timestamp, data, previousHash = '') {
+            this.index = index;
+            this.previousHash = previousHash;
+            this.timestamp = timestamp;
+            this.data = data;
+            this.hash = this.calculateHash(); 
+        }
+        calculateHash(){
+            return hash;
+        }
+    }   
+
+    function isChainValid() {
+    for (let i = 1; i < this.chain.length; i++) {
+        const currentBlock = this.chain[i];
+        const previousBlock = this.chain[i - 1];
+
+        if (currentBlock.hash !== currentBlock.calculateHash()) {
+            return false;
+        }if (currentBlock.previousHash !== previousBlock.hash) {
+            return false;
+        }
+    }
+    return true;
+}
+
+}
+
+////////////////////////
+function Chain(){
+    this. blocks:[{
+        number: 0,
+        timestamp: +(new Date()),
+        prevHash: '',
+        data: ''
+    }],
+
+    this. addBlock: function(data){
+          //obtiene el ultimo bloque de la cadena
+        var lastBlock = this.blocks.slice(-1)[0];
+        var stringToHash = String(lastBlock.number) + String(lastBlock.timestamp) + String(lastBlock.prevHash) + String(lastBlock.data);
+        //Obtiene el numero del ultimo bloque y suma 1
+        var b = {
+            number: lastBlock.number +1,
+            timestamp: +(new Date()),
+            prevHash: hash (stringToHash),
+            data: data
+        };
+        this.blocks.push(b);
+      
+    }
+    this.isValidChain: function(){
+        var isValid = true;
+
+        for ( var i=this.blocks.length-1; i>0; i--){
+            var lastBlock=this.blocks[i];
+            var lastLastBlock= this.blocks[i-1];
+
+            var stringToHash = String(lastBlock.number) + String(lastBlock.timestamp) + String(lastBlock.prevHash) + String(lastBlock.data);
+            var lastLastHash = hash(stringToHash);
+
+            if (lastBlock.prevHash === lastLastHash){
+                return "THE CHAIN IS VALID";
+            }else{
+                return "DANGER!, THE CHAIN IS NOT VALID";
+            }
+        //Recorre la cadena por atras y verifica que cada hash es válido
+        } 
+    }
+}
+var c = new Chain();
+c.addBlock("data2");
+c.addBlock("data1");
+console.log(c);
+console.log(isValidChain());
