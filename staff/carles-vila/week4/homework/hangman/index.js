@@ -36,7 +36,7 @@ function restartGame(){
     usedLetters = [];
     docInputGuess.value="";
     docUsedLetters.innerHTML = usedLetters.join(' ');
-
+    docImg.className = "lifes6"
     startGame();
 }
 
@@ -44,6 +44,14 @@ function loseGame(){
     docImgFinish.className = "lifes0";
     docMainFinish.innerHTML= name+"!!! Has perdido!!!";
     docMessageFinish.innerHTML = "Buen intento. ¿Que quieres hacer?";
+    docFinishGame.style.display = 'flex';
+    docModalBackground.style.display = 'flex';
+}
+
+function winGame(){
+    docImgFinish.className = docImg.className;
+    docMainFinish.innerHTML= name+"!!! Has ganado!!!";
+    docMessageFinish.innerHTML = "Muchas Felicidades!!. ¿Que quieres hacer?";
     docFinishGame.style.display = 'flex';
     docModalBackground.style.display = 'flex';
 }
@@ -73,7 +81,12 @@ function guessLetter(letter,paraula){
     }
     docInputGuess.value="";
     docUsedLetters.innerHTML = usedLetters.join(' ');
+    !guessing.includes("_")?winGame():"";
     vidas==0?loseGame():"";
+}
+
+function selectWord(){
+    return paraules[Math.round(Math.random()*paraules.length)];
 }
 
 function startGame(){
@@ -82,8 +95,7 @@ function startGame(){
     docMainGame.style.display="flex";
     docStartGame.style.display="none";
     docErrorName.innerHTML="";
-    var paraula = paraules[Math.round(Math.random()*paraules.length)];
-    console.log(paraula);
+    var paraula = selectWord();
     for(var i=0;i<paraula.length;i++){
         /\s/.test(paraula[i])?guessing[i]="<br />":guessing[i]="_"
     }
@@ -93,6 +105,7 @@ function startGame(){
         var inputLetter = docInputGuess.value;
         guessLetter(inputLetter,paraula);
     })
+
 }
 
 docStart.addEventListener('click',function(e){
