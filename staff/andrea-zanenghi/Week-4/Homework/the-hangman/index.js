@@ -105,8 +105,8 @@ function guessWord(input){
   inputLetter = input
   wordPos = wordPlay.indexOf(inputLetter)
   console.log(wordPos,wordPlay)
-  document.getElementById(input).className = "button-off"
-  document.getElementById(input).disabled = true
+  getId(input).className = "button-off"
+  getId(input).disabled = true
 
   if(wordPos < 0){
     getId('text-info').innerHTML = 'Try Again'

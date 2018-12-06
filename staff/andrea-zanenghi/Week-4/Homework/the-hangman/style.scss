@@ -130,7 +130,6 @@ header{
   flex-direction: row;
   justify-content: center;
   margin: 5vh;
-
   
 }
 .container {
@@ -139,6 +138,8 @@ header{
   justify-content: center;
   align-content: center;
   vertical-align: middle;
+  cursor: pointer;
+
 
   & img{
     width:12vw;

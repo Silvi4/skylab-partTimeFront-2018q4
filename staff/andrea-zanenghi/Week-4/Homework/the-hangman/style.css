@@ -166,6 +166,8 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 5vh;
+    cursor: pointer;
+
 }
 
 .container {

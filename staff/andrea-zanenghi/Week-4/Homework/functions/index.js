@@ -141,3 +141,28 @@ function abc() {
 }
 
 abc();
+
+// Perfect number
+
+function findIfPerfect(n){
+  
+  numbers = []
+  dividers = []
+
+  for (i = 1; i < n+1; i++){numbers.push([i])}
+
+  for (i = 1; i < n+1; i++){
+   if(n % i === 0) {dividers.push(i)}
+  }
+
+  dividers.pop()
+  divSum = dividers.reduce(function(a,b){return a + b},0)
+
+  return divSum === n 
+  
+  ? console.log(`${n} is perfect, dividers are ${dividers}`)
+  : console.log(`${n} is not a perfect number`)
+}
+
+findIfPerfect(28)
+findIfPerfect(29)
