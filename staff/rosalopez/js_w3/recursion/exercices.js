@@ -16,9 +16,7 @@ removeChars('AAAABBARRRCC');
 
 // pasaremos la misma función pero con un 'for'
 function removeRepeatChars(string) {
-    var singles = {
-
-    };
+    var singles = { };
 
     for(var i = 0; i < string.length;i++){
         var el = string.charAt(i);

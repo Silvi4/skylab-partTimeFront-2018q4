@@ -289,7 +289,7 @@ sum_sq([8, 11, 9, 4]);
 //### showChoices
 
 //### showLeapYears
-function showLeapYears(starYear, endYear) {
+function showLeapYears(starYears, endYear) {
     var years = [];
     for (var i = starYears; i <= endYear; i++){
         years.push(i);
