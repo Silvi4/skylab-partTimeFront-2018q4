@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bitter', serif;
+}
+
+header {
+  height: 10vh;
+  background: #ba9090;
+  font-size: 8vh;
+  color: white;
+  text-align: center;
+  padding: 2vh;
+}
+
+.content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content-box div {
+  padding: 2vh 2vw;
+}
+
+.word-to-guess {
+  font-size: 10vw;
+  text-align: center;
+}
+
+.input {
+  -webkit-appearance: textfield;
+  background-color: #5c1717;
+  -webkit-rtl-ordering: logical;
+  height: 5vh;
+  cursor: text;
+  padding: 1px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  -o-border-image: initial;
+     border-image: initial;
+}
+
+.alphabet {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[14];
+      grid-template-columns: repeat(14, 1fr);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-gap: 2vw;
+}
+
+.button {
+  background-color: #dabd4a;
+  border: none;
+  color: white;
+  padding: 1.8vh 1.8vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-butt {
+  background-color: #4d934d;
+  border: none;
+  color: white;
+  padding: 1vh 4vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.category-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  vertical-align: middle;
+}
+
+.container img {
+  width: 12vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */
