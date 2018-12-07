@@ -3,7 +3,8 @@ import { finished } from 'stream';
 
 //Variables d'inici de partida
 var guessing = [];
-var paraules = ['Javascript','React','Expresion Regular'];
+var paraules = ['Javascript','React','Expresion Regular','Angular','Variable','Loop' ];
+var paraula = "";
 var name = "";
 var vidas = 6;
 var usedLetters=[];
@@ -28,15 +29,21 @@ var docRestartButton = document.getElementById('restartButton');
 var docMainFinish = document.getElementById('mainFinish');
 var docMessageFinish = document.getElementById('messageFinish');
 var docImgFinish = document.getElementById('imgFinish');
+var docModal = document.getElementById('modal');
+var docCancel = document.getElementById('cancel');
+var docSubmitSolution = document.getElementById('submit-solution');
+var docInputSolution = document.getElementById('input-solution')
 var docModalSolucionar = document.getElementById('modalSolucionar');
 
 function restartGame(){
     docFinishGame.style.display = 'none';
     docModalBackground.style.display = 'none';
     usedLetters = [];
+    guessing = [];
     docInputGuess.value="";
     docUsedLetters.innerHTML = usedLetters.join(' ');
     docImg.className = "lifes6"
+    docErrorGuess.innerHTML = "";
     startGame();
 }
 
@@ -64,8 +71,9 @@ function guessLetter(letter,paraula){
     if(usedLetters.includes(letter)){
         docErrorGuess.innerHTML = "Ya ha seleccionado esta letra previamente."
         docInputGuess.value="";
-        return finished;
+        return "finished";
     }
+    docErrorGuess.innerHTML = "";
     usedLetters.push(letter);
     if(paraula.includes(letter)){
         for(var i=0;i<paraula.length;i++){
@@ -86,7 +94,9 @@ function guessLetter(letter,paraula){
 }
 
 function selectWord(){
-    return paraules[Math.round(Math.random()*paraules.length)];
+    var number = Math.round(Math.random()*paraules.length)
+    console.log(number);
+    return paraules[number];
 }
 
 function startGame(){
@@ -95,19 +105,15 @@ function startGame(){
     docMainGame.style.display="flex";
     docStartGame.style.display="none";
     docErrorName.innerHTML="";
-    var paraula = selectWord();
+    paraula = selectWord();
     for(var i=0;i<paraula.length;i++){
         /\s/.test(paraula[i])?guessing[i]="<br />":guessing[i]="_"
     }
     docWord.innerHTML=guessing.join(' ');
-    docGuessForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        var inputLetter = docInputGuess.value;
-        guessLetter(inputLetter,paraula);
-    })
-
 }
 
+
+//Event Listeners
 docStart.addEventListener('click',function(e){
     name=docName.value;
     if(/[a-zA-Z0-9]{1,}/.test(name)){
@@ -117,7 +123,31 @@ docStart.addEventListener('click',function(e){
     }
 })
 
+docGuessForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var inputLetter = docInputGuess.value;
+    guessLetter(inputLetter,paraula);
+})
+
 docRestartButton.addEventListener('click',function(e){
     e.preventDefault();
     restartGame();
+})
+
+docModal.addEventListener('click',function(e){
+    e.preventDefault();
+    docModalSolucionar.style.display = 'flex';
+    docModalBackground.style.display = 'flex';
+})
+
+docCancel.addEventListener('click',function(e){
+    e.preventDefault();
+    docModalSolucionar.style.display = 'none';
+    docModalBackground.style.display = 'none';
+})
+
+docSubmitSolution.addEventListener('click',function(e){
+    e.preventDefault();
+    docModalSolucionar.style.display = 'none';
+    docInputSolution.value.toLowerCase() === paraula.toLowerCase()? winGame():loseGame();
 })
