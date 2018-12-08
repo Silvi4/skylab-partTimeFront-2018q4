@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RockPaperScissors game with jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Unlock" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Rock - Paper - Scissors game</h1>
+      <form action="/action_page.php">
+        <input type="checkbox" name="computer_button" value="computer">Computer<br>
+      </form>
+  </header>
+      <div class="main">
+          <div class="left"> 
+              <button class="hand1" data-value="rock">Rock</button>
+              <button class="hand1" data-value="paper">Paper</button>
+              <button class="hand1" data-value="scissors">Scissors</button>
+          </div>
+          <div class="middle">
+              <div>Player 1</div>
+              <div>Player 2</div>
+              <div class="result"></div>
+              <button class="again" data-value="play_again">Play Again</button>
+          </div>
+          <div class="rigth">
+              <button class="hand2" data-value="rock">Rock</button>
+              <button class="hand2" data-value="paper">Paper</button>
+              <button class="hand2" data-value="scissors">Scissors</button>
+          </div>
+      </div>
+</body>
+</html>

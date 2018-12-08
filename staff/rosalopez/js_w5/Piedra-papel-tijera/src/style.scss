@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(189, 237, 243);
+  font-family: 'Unlock', cursive;
+  font-size: 30px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 30px;
+    height: 75px;
+}
+form {
+    display:flex;
+    flex-flow: row-reverse;
+    font-size: 30px;
+}
+button {
+    font-family: 'Unlock', cursive;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 200px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+}
+div.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+div:nth-child() {
+    display: flex;
+    flex-direction: column; 
+}
+

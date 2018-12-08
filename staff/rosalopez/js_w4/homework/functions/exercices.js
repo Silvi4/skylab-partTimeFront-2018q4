@@ -3,7 +3,7 @@ var input = '1, 2, 3, 4'
 function add(input){
     var inputNumbers = input.split(",");
     console.log(inputNumbers);
-    return sum += inputNumbers[i],
+    return sum += igit pull nputNumbers[i],
 };
 
 add(input);
