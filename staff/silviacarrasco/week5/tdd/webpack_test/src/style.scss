@@ -1,0 +1,182 @@
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://thumbs.gfycat.com/WhichDisastrousAmurratsnake-small.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Luckiest Guy', cursive;
+    p {
+      font-size: 30px;
+      text-align: center;
+    }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+
+.title {
+  display: flex;
+}
+
+.title-hands {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  p{
+    color: coral;
+  }
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  input {
+    width: 20px;
+    height: 20px;
+  }
+  label {
+    font-size: 17px;
+    padding-top: 7px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    img{
+      width: 60%;
+      height: 60%;
+      border: 3px solid black;
+      border-radius: 100%;
+      background-color:yellowgreen;
+    }
+}
+
+img:hover {
+  background-color: rgb(130, 246, 248);
+}
+
+.hand1 {
+  text-align: center;
+  :nth-child(2) > img {
+    padding-bottom: 5px;
+  }
+}
+
+.rotate {
+    transform: rotatey(180deg);
+}
+
+.hand2 {
+  text-align: center;
+  :nth-child(2) > img {
+    padding-bottom: 10px;
+  }
+}
+
+.button {
+  padding-bottom: 10px;
+}
+
+.ipad {
+  display: none;
+}
+
+.movile {
+  padding-top: 10px;
+  p {
+  font-size: 20px;
+  margin: 0;
+  height: 50px;
+  color: green;
+}
+}
+
+.again {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px){
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header {
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    p{
+      font-size: 50px;
+    }
+  }
+
+  .title-hands {
+    padding-top: 15px;
+    p{
+      font-size: 50px;
+    }
+  }
+
+  .movile p {
+    font-size: 30px;
+    padding-top: 5px;
+  }
+
+  .box {
+    justify-content: flex-end;
+    padding-right: 133px;
+    label {
+      font-size: 20px;
+    }
+  }
+
+  .again h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .title-hands p {
+    margin: 0;
+    padding: 25px 0;
+  }
+
+ .ipad {
+   display: flex;
+   width: 37vw;
+   color: green;
+   p {
+     font-size: 30px;
+     font-size: 40px;
+     margin: auto;
+   }
+ }
+
+ .movile {
+   display: none;
+ }
+
+ .again {
+   margin: auto;
+ }
+}
