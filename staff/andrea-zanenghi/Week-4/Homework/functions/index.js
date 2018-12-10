@@ -57,6 +57,7 @@ function matrix(n) {
   for (i = 0; i < n; i++){
     for(j = 0; j < n; j++){
       i === j ? array.push('1') : array.push('0')
+      console.log(i,j)
     }
   }
   while (array.length > 0){
@@ -102,8 +103,7 @@ console.log(amountToCoins(51,coins))
 
 function Char_Count(str1) {
   var chars = {};
-  str1.toLowerCase().replace(/\S/g, function(l){chars[l] = (isNaN(chars[l]) ? 1 : 
-  chars[l] + 1);});
+  str1.toLowerCase().replace(/\S/g, function(l){chars[l] = (isNaN(chars[l]) ? 1 : chars[l] + 1);});
   return chars;
 }
 
