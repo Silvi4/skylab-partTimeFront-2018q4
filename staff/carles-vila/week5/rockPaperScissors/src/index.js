@@ -1,4 +1,5 @@
 import "./css/style.scss";
+import "./img/rock.jpg";
 var hands = {
   hand1: "",
   hand2: ""
@@ -17,10 +18,12 @@ var rockPaperScissors = function(hand1, hand2){
     winnerElement = "paper";
   }else if(hand1==hand2 && (hand1=="paper" || hand1=="rock" || hand1=="scissors")){
     result += "tie!";
+    winnerElement = "tie";
   }else{
     throw new Error("Los valores introducidos han de ser rock, paper o scissors")
   }
   return {
+    winnerElement : winnerElement,
     winner: winnerElement===hand1?"hand1":(winnerElement===hand2?'hand2':'tie'),
     msg:result
   };
@@ -31,7 +34,10 @@ function checkPlayerOptions(){
     var result = rockPaperScissors(hands.hand1,hands.hand2);
     $('#resultMessage').html(result.msg);
     var button = '<button id="replay">Play Again</button>'
-    $('#resultMessage').append(button)
+    $('#resultMessage').append(button);
+    var image = '<img class="finishimg" src="./img/'+result.winnerElement+'.jpg">'
+    $('#resultMessage').prepend(image);
+    
     $('#replay').click(function(){
       initBars();
     })
