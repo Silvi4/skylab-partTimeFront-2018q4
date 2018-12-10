@@ -1,0 +1,28 @@
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#controls{
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ai{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
