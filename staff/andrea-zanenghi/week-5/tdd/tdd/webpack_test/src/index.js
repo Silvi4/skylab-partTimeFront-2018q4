@@ -182,6 +182,7 @@ function playHumans(){
 
       botActive = false;
       botVsBot = false;
+      $(".bot-bot").attr('disabled','disabled');
       $('.hand-2').children("img").remove();
       $('.img-load-1').children("img").remove();
       $('.img-load-2').children("img").remove();
@@ -196,6 +197,7 @@ function playHumans(){
     } else if(!$('#human').is(":checked")) {
       botActive = true;
       botVsBot = false;
+      $(".bot-bot").removeAttr('disabled');
       $('.img-load-1').children("img").remove();
       $('.img-load-2').children("img").remove();
       $('.hand-2 .rock-2').remove()
