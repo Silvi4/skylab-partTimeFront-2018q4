@@ -108,8 +108,6 @@ function setupScore(){
           } else if (j.hvbscore === 'tie' && j.botVsbot){
             scoreBots.tie++  
           }   
-
-          console.log(scoreArray,scoreBots,'this is j'+ j.botVsbot,j.hvbscore,)
  
       });
 
