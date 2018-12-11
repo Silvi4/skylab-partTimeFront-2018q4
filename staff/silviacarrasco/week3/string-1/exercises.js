@@ -83,11 +83,81 @@ function parametrize(text){
 }
 parametrize('js string exercises')
 
-// H temrinar!
+// H capitalize_words
 
 function capitalize(text) {
     var sp = text.split(" ")
-    console.log(sp)
+	var upper = ''
+    for(var i = 0 ; i< sp.length; i++) {
+        upper += sp[i][0].toUpperCase()+ sp[i].substr(1) + ' '
+    }
+	return upper;
 }
 
 capitalize('js string ecercises')
+
+// I capitalize first
+
+function capitalize(text) {
+    return text[0].toUpperCase() + text.substr(1)
+}
+
+capitalize("js string exercises")
+
+// J swapcase
+
+function swapcase(text) {
+	var swapText = '';
+    for(var i = 0; i<text.length; i++){
+        if(text[i] === text[i].toUpperCase()) {
+            swapText += text[i].toLowerCase()
+        }else {
+            swapText += text[i].toUpperCase()
+        }
+    }
+	return swapText;	
+}
+
+swapcase('AaBbc');
+
+// K camelize
+
+function camelize (text) {
+	var camel = '';
+    var sp = text.split(' ')
+    for(var i = 0; i< sp.length; i++){
+		camel += sp[i][0].toUpperCase() + sp[i].slice(1)
+	}
+	return camel 
+}
+
+camelize('my name is silvia')
+
+// L uncamelcase
+
+function uncamelText(text) {
+    var text = text.replace(/[A-Z]/g, function(letter) {
+       return '_' + letter.toLowerCase();
+    });
+   console.log(text)
+}
+
+uncamelText('myNameIsSilvia');
+
+// M repeat
+
+function repeatText(text,number) {
+    return text.repeat(number)
+	
+}
+
+repeatText('Ha!', 4);
+
+// N insert
+
+function insert(text1,text2,position){
+    return text1.slice(0,position) + text2 + ' ' + text1.slice(position)
+}
+
+insert('We are doing some exercises.', 'javascript','18')
+

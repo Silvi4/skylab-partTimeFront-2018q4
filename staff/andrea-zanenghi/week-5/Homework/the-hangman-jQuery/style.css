@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bitter', serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  height: 8vh;
+  background: #ba9090;
+  font-size: 8vw;
+  color: white;
+  text-align: center;
+  padding: 2vh;
+}
+
+.play-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.play-area div {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 0.5vh 1.5vw;
+}
+
+.content-hint {
+  padding: 2vh;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content-hint p {
+  margin: 0px 0px;
+}
+
+.word-to-guess {
+  font-size: 11vw;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.alphabet {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1Fr)[5];
+      grid-template-columns: repeat(5, 1Fr);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-gap: 1vw;
+}
+
+.alphabet div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.alphabet #z {
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+
+.alphabet #y {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.button {
+  background-color: #dabd4a;
+  border: none;
+  color: white;
+  width: 5.2vh;
+  min-width: 43px;
+  min-height: 43px;
+  padding: -0.8vh 0.8vw;
+  font-size: 29px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+.button-off {
+  background-color: #9b8a44;
+  border: none;
+  color: white;
+  min-width: 5.2vh;
+  max-width: 6.2vh;
+  padding: -0.8vh 0.8vw;
+  font-size: 29px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+.info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-text {
+  font-size: 12px;
+  padding: 0vh 1vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main-butt {
+  background-color: #4d934d;
+  border: none;
+  color: white;
+  padding: 0.4vh 0.8vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.9vh;
+  margin: 1vh 1vw;
+  cursor: pointer;
+}
+
+.category-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5vh;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  vertical-align: middle;
+}
+
+.container img {
+  width: 12vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p {
+  margin: 0;
+  padding: 0 5px;
+}
+
+.rotating-block {
+  -webkit-animation: spin1 2s infinite linear;
+  animation: spin1 2s infinite linear;
+  display: block;
+}
+
+@-webkit-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media all and (min-width: 600px) {
+  .alphabet {
+    -ms-grid-columns: (1Fr)[9];
+        grid-template-columns: repeat(9, 1Fr);
+  }
+  header {
+    font-size: 6vh;
+    color: white;
+    text-align: center;
+    padding: 2vh;
+  }
+  .word-to-guess {
+    font-size: 8vw;
+    text-align: center;
+  }
+  .alphabet {
+    grid-gap: 1vw;
+  }
+  .alphabet #z {
+    -ms-grid-column: 9;
+    grid-column: 9;
+  }
+  .alphabet #y {
+    -ms-grid-column: 8;
+    grid-column: 8;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    vertical-align: middle;
+  }
+  .container img {
+    width: 10vh;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .button {
+    border: none;
+    color: white;
+    width: 5.2vh;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.2vh 0.2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4vh;
+    margin: 1px 1px;
+    cursor: pointer;
+  }
+  .content-box div {
+    padding: vh 1.5vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

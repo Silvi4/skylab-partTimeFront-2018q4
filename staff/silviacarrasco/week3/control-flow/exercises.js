@@ -79,7 +79,7 @@ largest_number(-5,-2,-6,0,-1)
 
 function odd_or_even() {
     for(var i = 0; i<16; i++){
-        if(i%2 = 0) {
+        if(i%2 == 0) {
             console.log(i + ' is even')
         }
         else{
