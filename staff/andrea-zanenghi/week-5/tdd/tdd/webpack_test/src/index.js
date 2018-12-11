@@ -88,32 +88,30 @@ function setupScore(){
   var scoreArray = {human: 0, computer: 0, tie: 0}
   var scoreBots = {computer1: 0, computer2: 0, tie: 0}
 
-  if (botActive && !botVsBot){  
 
-    for (var j = 0; j < scoreDetail.length; j++){
+      scoreDetail.forEach(function(j){
+          
+          if(j.hvbscore === 'human' && !j.botVsbot && j.botPlayer){
+            scoreArray.human++
+          } else if (j.hvbscore === 'human' && j.botVsbot && j.botPlayer){
+            scoreBots.computer1++ 
+          }
 
-        if (scoreDetail[j].hvbscore === 'human'){
-          scoreArray.human++ 
-        } else if(scoreDetail[j].hvbscore === 'computer'){
-          scoreArray.computer++
-        } else if(scoreDetail[j].hvbscore === 'tie'){
-          scoreArray.tie++
-        }
-    }
+          if(j.hvbscore === 'computer' && !j.botVsbot && j.botPlayer){
+            scoreArray.computer++
+          } else if (j.hvbscore === 'computer' && j.botVsbot && j.botPlayer){
+            scoreBots.computer2++
+          }
 
-    
-  } else if (botVsBot){
-    for (j = 0; j < scoreDetail.length; j++){
+          if (j.hvbscore === 'tie' && !j.botVsbot && j.botPlayer) {
+            scoreArray.tie++
+          } else if (j.hvbscore === 'tie' && j.botVsbot){
+            scoreBots.tie++  
+          }   
 
-      if (scoreDetail[j].hvbscore === 'human'){
-        scoreBots.computer1++ 
-      } else if(scoreDetail[j].hvbscore === 'computer'){
-        scoreBots.computer2++
-      } else if(scoreDetail[j].hvbscore === 'tie'){
-        scoreBots.tie++
-      }
-  }
-  }
+          console.log(scoreArray,scoreBots,'this is j'+ j.botVsbot,j.hvbscore,)
+ 
+      });
 
   var humanVsComputer = `<p id="score-text"><span class="score-t">[Score]</span> <span class="title-s">Human</span>: <span class="score-s">${scoreArray.human}</span> - <span class="title-s">Computer</span>: <span class="score-s">${scoreArray.computer}</span> - <span class="title-s">Tie</span>: <span class="score-s">${scoreArray.tie}</span></p>`
   var computerVsComputer = `<p id="score-text"><span class="score-t">[Score]</span> <span class="title-s">Computer 1</span>: <span class="score-s">${scoreBots.computer1}</span> - <span class="title-s">Computer 2</span>: <span class="score-s">${scoreBots.computer2}</span> - <span class="title-s">Tie</span>: <span class="score-s">${scoreBots.tie}</p>`
