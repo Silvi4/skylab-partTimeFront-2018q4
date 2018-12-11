@@ -292,8 +292,22 @@ function addButtonsListeners(){
 function twoPlayerListeners(){
 
   resetClick()
-  addButtonsListeners()
 
+  $(".rock-1").click(function() {
+    player1 = 'rock'
+    imaging('rock-1-j', 'grab', '1')
+    twoPlayers()
+  })
+  $(".paper-1").click(function() {
+    player1 = 'paper'
+    imaging('paper-1-j', 'hand', '1')
+    twoPlayers()
+  })
+  $(".scissors-1").click(function() {
+    player1 = 'scissors'
+    imaging('scissors-1-j', 'peace', '1')
+    twoPlayers()
+  })
   $(".rock-2").click(function() {
     player2 = 'rock'
     imaging('rock-2-j', 'grab', '2')
