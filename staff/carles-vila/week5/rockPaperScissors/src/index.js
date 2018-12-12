@@ -53,6 +53,32 @@ function returnFinalImage(image){
   imagetag += '"><br />';
   return imagetag;
 }
+function storageResults(result){
+  switch(result.winner){
+    case "hand1":
+      localStorage.hand1 = typeof localStorage.hand1==="undefined" || isNaN(localStorage.hand1)? 1 : parseInt(localStorage.hand1)+1;
+      break;
+    case "hand2":
+      localStorage.hand2 = typeof localStorage.hand2==="undefined" || isNaN(localStorage.hand2)? 1 : parseInt(localStorage.hand2)+1;
+      break;
+    case "tie":
+      localStorage.tiehand = typeof localStorage.tiehand==="undefined" || isNaN(localStorage.tiehand)? 1 : parseInt(localStorage.tiehand)+1;
+  }
+  switch(result.winnerElement){
+    case "paper":
+    localStorage.paper = typeof localStorage.paper==="undefined" || isNaN(localStorage.paper)? 1 : parseInt(localStorage.paper)+1;
+      break;
+    case "rock":
+      localStorage.rock = typeof localStorage.rock==="undefined" || isNaN(localStorage.rock)? 1 : parseInt(localStorage.rock)+1;
+      break;
+    case "scissors":
+      localStorage.scissors = typeof localStorage.scissors==="undefined" || isNaN(localStorage.scissors)? 1 : parseInt(localStorage.scissors)+1;
+      break;
+    case "tie":
+      localStorage.tieelement = typeof localStorage.tieelement==="undefined" || isNaN(localStorage.tieelement)? 1 : parseInt(localStorage.tieelement)+1;
+      break;
+  }
+}
 
 function checkPlayerOptions(){
   if(hands.hand1 !== "" && hands.hand2 !== ""){
@@ -63,6 +89,7 @@ function checkPlayerOptions(){
     $('#resultMessage').append(button);
     var image = returnFinalImage(result.winnerElement);
     $('#resultMessage').prepend(image);
+    storageResults(result);
     $('#replay').click(function(){
       initBars();
     })
@@ -113,6 +140,9 @@ function initGame(){
   var human = $('#human:checked').val()?true:false;
   setButtonsListeners(human);
   humanValue();
+  $('#modalOpen').click(function(){
+    openModal();
+  })
 }
 
 function initBars(){
@@ -121,10 +151,48 @@ function initBars(){
   $('button').removeClass('selected');
   $('#replay').unbind('click');
   $('#resultMessage').html("");
+  var human = $('#human:checked').val()?true:false;
   setButtonsListeners(human);
 }
 
+function refreshResults(){
+  localStorage.hand1 = 0;
+  localStorage.hand2 = 0;
+  localStorage.tiehand = 0;
+  localStorage.paper = 0;
+  localStorage.rock = 0;
+  localStorage.scissors = 0;
+  localStorage.tieelement = 0;
+}
+
+function viewResults(){
+  $('#hand1result').html(localStorage.hand1);
+  $('#hand2result').html(localStorage.hand2);
+  $('#tiehandresult').html(localStorage.tiehand);
+  $('#rockresult').html(localStorage.rock);
+  $('#paperresult').html(localStorage.paper);
+  $('#scissorsresult').html(localStorage.scissors);
+  $('#tieelementresult').html(localStorage.tieelement);
+}
+
+function closeModal(){
+  $('#modalClose, .modalBackground, #resetResults').unbind('click');
+  $('.modalBackground').hide();
+}
+
+function openModal(){
+  viewResults()
+  $('.modalBackground').attr( "style", "display: flex;" );
+  $('#modalClose, .modalBackground').click(function(){
+    closeModal();
+  })
+  $('#resetResults').click(function(){
+    refreshResults();
+  })
+}
+
 initGame();
+
 exports.rockPaperScissors = rockPaperScissors;
 
 
