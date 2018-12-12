@@ -1,9 +1,14 @@
 import "./css/style.scss";
-import "./img/rock.jpg";
+import rock from "./img/rock.jpg";
+import scissors from "./img/scissors.jpg";
+import paper from "./img/paper.jpg";
+import tie from "./img/tie.jpg";
+
 var hands = {
   hand1: "",
   hand2: ""
 }
+
 var rockPaperScissors = function(hand1, hand2){
   var result = hand1+" vs "+hand2+" => ";
   var winnerElement = "";
@@ -29,24 +34,46 @@ var rockPaperScissors = function(hand1, hand2){
   };
 }
 
+function returnFinalImage(image){
+  var imagetag = '<img class="finishimg" src="';
+  switch(image){
+    case 'rock':
+      imagetag += rock;
+      break
+    case 'scissors':
+      imagetag += scissors;
+      break
+    case 'paper':
+      imagetag += paper;
+      break
+    case 'tie':
+      imagetag += tie;
+      break
+  }
+  imagetag += '"><br />';
+  return imagetag;
+}
+
 function checkPlayerOptions(){
   if(hands.hand1 !== "" && hands.hand2 !== ""){
+    $('button').unbind("click");
     var result = rockPaperScissors(hands.hand1,hands.hand2);
     $('#resultMessage').html(result.msg);
     var button = '<button id="replay">Play Again</button>'
     $('#resultMessage').append(button);
-    var image = '<img class="finishimg" src="./img/'+result.winnerElement+'.jpg">'
+    var image = returnFinalImage(result.winnerElement);
     $('#resultMessage').prepend(image);
-    
     $('#replay').click(function(){
       initBars();
     })
   }
 }
+
 function randomOption(){
   var Options=['rock','paper','scissors'];
   return Options[Math.floor(Math.random()*Options.length)];
 }
+
 function setValue(hand,value){
   hands[hand] = value;
 }
@@ -87,13 +114,14 @@ function initGame(){
   setButtonsListeners(human);
   humanValue();
 }
+
 function initBars(){
   hands.hand1 = "";
   hands.hand2 = "";
   $('button').removeClass('selected');
   $('#replay').unbind('click');
   $('#resultMessage').html("");
-  $('#human:checked').val()?true:setValue('hand2',randomOption());
+  setButtonsListeners(human);
 }
 
 initGame();

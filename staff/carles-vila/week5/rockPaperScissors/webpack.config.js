@@ -34,6 +34,10 @@ module.exports = (env, options) => ({
             attrs: ['img:src']
           }
         }
+      },
+      {
+        test: /img\.(jpe?g|png|gif|svg)$/i, 
+        loader: "file-loader?name=/img/[name].[ext]"
       }
     ]
   },
