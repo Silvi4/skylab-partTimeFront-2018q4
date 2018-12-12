@@ -42,3 +42,26 @@ Examples:
 > rockPaperScissors("paper")
 "paper vs paper => tie!"
 ```
+
+## Tasks
+
+- Mount the solution in the following structure:
+
+```
+skylab-bootcamp-201801
+└── course
+    └── frontend
+        └── rock-paper-scissors
+            ├── src
+            │   └── rockPaperScissors.js
+            └── test
+                ├── SpecRunner.html
+                ├── lib
+                │   └── jasmine-x.y.z
+                │       └── ...
+                └── rockPaperScissors.test.js
+```
+      
+- Write the test first. It should cover all possible cases.
+
+- Implement the function after writing the test cases.

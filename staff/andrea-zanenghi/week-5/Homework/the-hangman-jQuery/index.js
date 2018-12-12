@@ -46,6 +46,15 @@ function getId(elementId) {
   return document.getElementById(elementId)
 }
 
+function creatButtonAlpha(){
+
+  for (i=0; i < alpha.length;i++){
+    var alphaLetter = (`<button class=button onclick="guessWord('${alpha[i]}')" id ="${alpha[i]}">${alpha[i].toUpperCase()}</button>`);
+    $('.alphabet').append(alphaLetter);
+  }
+
+}
+
 function restoreHint(){
   humanRestart = [
     'Press Hint [?] if you don\'t have any clue', 
@@ -56,18 +65,17 @@ function restoreHint(){
     'Histoy, Internet or Cinema? Choose yours'
   ]
   
-  getId('hint-box').innerHTML = humanRestart[Math.floor(Math.random()*humanRestart.length)]
+  $('#hint-box').html(`${humanRestart[Math.floor(Math.random()*humanRestart.length)]}`)
   
 }
 
 function setupGame(words){
-
   
   restoreHint()
+  creatButtonAlpha()
   category = words
-  getId('text-info').innerHTML = 'Choose a letter'
-  alpha.forEach(function (el){document.getElementById(el).disabled = false})
-  alpha.forEach(function (el){document.getElementById(el).className = 'button'})
+  alpha.forEach(function (el){getId(el).disabled = false})
+  alpha.forEach(function (el){getId(el).className = 'button'})
   
 
   shuffleObj = words.sort( () => Math.random() - 0.5);
@@ -93,11 +101,11 @@ function setupGame(words){
   }
   
   startingGuess = hiddenGuess('_',wordPlay.length)
-  getId('lives-left').innerHTML = 'Lives Left: ' + lives
+  $('#lives-left').html(`Lives Left: ${lives}`) 
   getId('word-to-guess').style.letterSpacing = "0px";
   getId('word-to-guess').style.color = 'black'
   getId('word-to-guess').style.textTransform = 'lowercase'
-  getId('word-to-guess').innerHTML = startingGuess.join(' ')
+  $('#word-to-guess').html(`${startingGuess.join(' ')}`) 
   
 }
 
@@ -110,7 +118,7 @@ function guessWord(input){
   getId(input).disabled = true
 
   if(wordPos < 0){
-    getId('text-info').innerHTML = 'Try Again'
+    $('#text-info').html('Try Again')
     lives--
     
   } else {
@@ -119,21 +127,19 @@ function guessWord(input){
         startingGuess[i] = wordPlay[i]
       }
     }
-    getId('text-info').innerHTML = 'You got it!'
+    $('#text-info').html('You got it!') 
   }
   
-  getId('lives-left').innerHTML = 'Lives Left: ' + lives
-  getId('word-to-guess').innerHTML = startingGuess.join(' ')
+  $('#lives-left').html(`Lives Left: ${lives}`) 
+  $('#word-to-guess').html(startingGuess.join(' ')) 
   checkEndGame()
 }
 
 function showHint(){
-  getId('hint-box').innerHTML = hintPlay.toString()
+  $('#hint-box').html(hintPlay.toString()) 
 }
 
 function checkEndGame(){
-
-  console.log('inside the game over selection')
   
   if(startingGuess.indexOf('_') === -1 || lives === 0) {gameOver()}
 }
@@ -141,26 +147,27 @@ function checkEndGame(){
 function gameOver(){
   
   alpha.forEach(function (el){document.getElementById(el).disabled = true})
-  getId('hint-box').innerHTML = 'Press Restart to play again'
+  $('#hint-box').htnl('Press Restart to play again')
 
   if(lives > 0){
-    getId('word-to-guess').innerHTML = startingGuess.join(' ')
-    getId('text-info').innerHTML = 'Well Done'
-    getId('lives-left').innerHTML = 'You win!'
+    $('#word-to-guess').html(`${startingGuess.join(' ')}`)
+    $('#text-info').html('Well Done') 
+    $('#lives-left').html('You win!') 
     getId('word-to-guess').style.color = 'darkblue'
     getId('word-to-guess').style.letterSpacing = "-4px";
     getId('word-to-guess').style.textTransform = 'uppercase'
   } else {
-    getId('text-info').innerHTML = 'You Lose'
-    getId('lives-left').innerHTML = 'Game Over'
+    $('#text-info').html('You Lose')
+    $('#lives-left').html('Game Over')
     getId('word-to-guess').style.textTransform = 'capitalize'
-    getId('word-to-guess').innerHTML = 'You Lose!'
+    $('#word-to-guess').html('You Lose!') 
     getId('word-to-guess').style.color = 'darkred'
   }
 
 }
 
 function restart(){
+  $('.alphabet').empty()
   setupGame(category)
 }
 
